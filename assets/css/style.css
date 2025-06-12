@@ -6,8 +6,44 @@
     --font-ibm: "IBM Plex Sans", system-ui, sans-serif;
 }
 
+.animacao {
+    animation: linkMenuFade ease forward 0.3s;
+}
+
 .linkMenu {
-    @apply text-[11pt] font-light
+    @apply text-[11pt] font-light opacity-0 transform translate-x-12 transition-all duration-700
+}
+
+.linkMenu:nth-child(1) {
+    @apply delay-300
+}
+
+.linkMenu:nth-child(2) {
+    @apply delay-[.44s]
+}
+
+.linkMenu:nth-child(3) {
+    @apply delay-[.58s]
+}
+
+.linkMenu:nth-child(4) {
+    @apply delay-[.72s]
+}
+
+.linkMenu:nth-child(5) {
+    @apply delay-[.81s]
+}
+
+.linkMenu:nth-child(6) {
+    @apply delay-[.91s]
+}
+
+.linkMenu:nth-child(7) {
+    @apply delay-[.95s]
+}
+
+header.ativo .linkMenu {
+    @apply opacity-100 translate-x-0
 }
 
 .linha {
@@ -19,7 +55,7 @@
 }
 
 header.ativo nav:nth-child(2) {
-    @apply left-0
+    @apply translate-x-0
 }
 
 header.ativo .navMenuHamburguer .linha2 {
@@ -35,7 +71,7 @@ header.ativo .navMenuHamburguer .linha3 {
 }
 
 .btnPrimario {
-    @apply border-white bg-transparent shadow-none text-white hover:bg-amber-300 hover:text-[#151515] hover:border-amber-300 hover:shadow-[0_0_14px_#FFD230]
+    @apply border-white bg-transparent shadow-none text-white hover:bg-amber-300 hover:text-[#151515] hover:border-amber-300 hover:shadow-[0_0_14px_#FFD230];
 }
 
 .textoColorido {
