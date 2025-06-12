@@ -434,6 +434,19 @@ header.ativo .navMenuHamburguer .linha3 {
   font-weight: var(--font-weight-extrabold);
   color: var(--color-amber-300);
 }
+.tituloSecao {
+  font-family: var(--font-ibm);
+  font-size: 22pt;
+  --tw-font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-amber-300);
+}
+.firstNavSecao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;

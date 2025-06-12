@@ -85,3 +85,11 @@ header.ativo .navMenuHamburguer .linha3 {
 .textoColoridoBold {
     @apply text-amber-300 font-extrabold
 }
+
+.tituloSecao {
+    @apply font-ibm text-amber-300 font-extrabold text-[22pt]
+}
+
+.firstNavSecao {
+    @apply flex flex-col items-center text-center
+}
