@@ -5,3 +5,27 @@
     --font-inter: "Inter", system-ui, sans-serif;
     --font-ibm: "IBM Plex Sans", system-ui, sans-serif;
 }
+
+.linkMenu {
+    @apply text-[11pt] font-light
+}
+
+.linha {
+    @apply bg-amber-300 w-9 h-1 my-1 rounded-full relative
+}
+
+.navMenuHamburguer {
+    @apply cursor-pointer p-2 z-[1]
+}
+
+header.ativo nav:nth-child(2) {
+    @apply left-0
+}
+
+header.ativo .navMenuHamburguer .linha2 {
+    @apply right-2.5
+}
+
+header.ativo .navMenuHamburguer .linha3 {
+    @apply -right-2.5
+}

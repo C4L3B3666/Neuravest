@@ -8,6 +8,7 @@
     <meta name="author" content="Neuravest Inc.">
     <meta name="googlebot" content="index, follow">
     <title>Neuravest | Investimentos com IA.</title>
+    <script src="assets/js/script.js" defer></script>
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="assets/css/output.css">
     <link rel="canonical" href="https://www.neuravest.com">
@@ -36,26 +37,36 @@
     </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#"><img src="assets/img/logo.png" alt="imagem da logo da neuravest" srcset=""></a>
+    <header class="flex items-center justify-between px-4 h-16 transition duration-300 ease-in backdrop-blur-xs w-screen fixed py-2.5 bg-[#151515]">
+
+        <nav class="z-[1]">
+            <a href="./"><img src="assets/img/logo.png" alt="imagem da logo da neuravest" srcset="" class="w-[22%]"></a>
         </nav>
-        <nav>
+
+        <nav class="absolute flex items-center flex-col bg-[#151515] text-white top-0 w-screen right-0 h-screen justify-around text-center font-inter left-full transition-all duration-500 ease-in">
             <a href="#" class="linkMenu">Página Inicial</a>
             <a href="#" class="linkMenu">Como Funciona?</a>
             <a href="#" class="linkMenu">Planos e Retornos</a>
             <a href="#" class="linkMenu">Nossos Parceiros</a>
             <a href="#" class="linkMenu">Quem Somos?</a>
-        </nav>
-        <nav>
             <a href="#"><button class="btn">Fale Connosco</button></a>
             <a href="#"><button class="btn">Investir - fácil e rápido</button></a>
         </nav>
-        <nav>
+
+        <nav class="hidden">
+            <a href="#"><button class="btn">Fale Connosco</button></a>
+            <a href="#"><button class="btn">Investir - fácil e rápido</button></a>
+        </nav>
+
+        <nav class="navMenuHamburguer">
             <div class="linha"></div>
-            <div class="linha"></div>
-            <div class="linha"></div>
+            <div class="linha linha2"></div>
+            <div class="linha linha3"></div>
         </nav>
     </header>
+
+    <main>
+        
+    </main>
 </body>
 </html>
