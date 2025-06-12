@@ -31,11 +31,11 @@ header.ativo .navMenuHamburguer .linha3 {
 }
 
 .btn {
-    @apply bg-amber-300 px-2 py-1 text-[#151515] font-ibm font-medium shadow-[0_0_14px_#FFD230] rounded-2xl cursor-pointer;
+    @apply bg-amber-300 px-2 py-1 text-[#151515] font-ibm font-medium shadow-[0_0_14px_#FFD230] rounded-2xl cursor-pointer border-2 border-amber-300;
 }
 
 .btnPrimario {
-    @apply border-amber-300 bg-transparent border-2 text-amber-300 hover:bg-amber-300 hover:text-[#151515]
+    @apply border-white bg-transparent shadow-none text-white hover:bg-amber-300 hover:text-[#151515] hover:border-amber-300 hover:shadow-[0_0_14px_#FFD230]
 }
 
 .textoColorido {
