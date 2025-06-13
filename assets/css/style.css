@@ -108,6 +108,8 @@ header.ativo .navMenuHamburguer .linha3 {
   animation: scroll 30s linear infinite;
 }
 
+
+
 .fade-edge::before,
   .fade-edge::after {
     overflow: hidden;
@@ -122,10 +124,10 @@ header.ativo .navMenuHamburguer .linha3 {
 
   .fade-edge::before {
     left: 0;
-    background: linear-gradient(to right, #151515 75%, transparent 100%);
+    background: linear-gradient(to right, #151515 89%, transparent 100%);
   }
 
   .fade-edge::after {
     right: 0;
-    background: linear-gradient(to left, #151515 75%, transparent 100%);
+    background: linear-gradient(to left, #151515 89%, transparent 100%);
   }

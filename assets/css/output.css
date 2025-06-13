@@ -495,11 +495,11 @@ header.ativo .navMenuHamburguer .linha3 {
 }
 .fade-edge::before {
   left: 0;
-  background: linear-gradient(to right, #151515 75%, transparent 100%);
+  background: linear-gradient(to right, #151515 89%, transparent 100%);
 }
 .fade-edge::after {
   right: 0;
-  background: linear-gradient(to left, #151515 75%, transparent 100%);
+  background: linear-gradient(to left, #151515 89%, transparent 100%);
 }
 @property --tw-translate-x {
   syntax: "*";
