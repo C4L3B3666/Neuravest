@@ -52,7 +52,7 @@ header.ativo .linkMenu {
 }
 
 .navMenuHamburguer {
-    @apply cursor-pointer p-2 z-[1]
+    @apply cursor-pointer p-2 z-[3]
 }
 
 header.ativo nav:nth-child(2) {
@@ -117,7 +117,7 @@ header.ativo .navMenuHamburguer .linha3 {
     top: 0;
     width: 50%;
     height: 100%;
-    z-index: 10;
+    z-index: 1;
     pointer-events: none;
   }
 

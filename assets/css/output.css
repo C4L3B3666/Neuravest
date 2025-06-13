@@ -190,9 +190,6 @@
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
-  .z-\[2\] {
-    z-index: 2;
-  }
   .z-\[3\] {
     z-index: 3;
   }
@@ -241,6 +238,9 @@
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
+  }
+  .overflow-x-hidden {
+    overflow-x: hidden;
   }
   .bg-\[\#151515\] {
     background-color: #151515;
@@ -391,7 +391,7 @@ header.ativo .linkMenu {
   background-color: var(--color-amber-300);
 }
 .navMenuHamburguer {
-  z-index: 1;
+  z-index: 3;
   cursor: pointer;
   padding: calc(var(--spacing) * 2);
 }
@@ -496,7 +496,7 @@ header.ativo .navMenuHamburguer .linha3 {
   top: 0;
   width: 50%;
   height: 100%;
-  z-index: 10;
+  z-index: 1;
   pointer-events: none;
 }
 .fade-edge::before {
