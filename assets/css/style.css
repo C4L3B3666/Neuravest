@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
 
 @theme {
+    --font-anton: "Anton", system-ui;
     --font-inter: "Inter", system-ui, sans-serif;
     --font-ibm: "IBM Plex Sans", system-ui, sans-serif;
-    --font-anton: "Anton", system-ui;
 }
 
 .animacao {
@@ -87,9 +88,9 @@ header.ativo .navMenuHamburguer .linha3 {
 }
 
 .tituloSecao {
-    @apply text-amber-300 font-extrabold text-[22pt] 
+    @apply text-gray-400 font-bold text-[20pt] font-ibm uppercase text-center
 }
 
-.firstNavSecao {
-    @apply flex flex-col items-center text-center
+.textoSecao {
+    @apply text-white font-light font-inter text-center
 }
