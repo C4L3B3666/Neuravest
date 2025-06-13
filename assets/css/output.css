@@ -181,6 +181,9 @@
   .fixed {
     position: fixed;
   }
+  .relative {
+    position: relative;
+  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -208,8 +211,8 @@
   .w-36 {
     width: calc(var(--spacing) * 36);
   }
-  .w-full {
-    width: 100%;
+  .w-max {
+    width: max-content;
   }
   .w-screen {
     width: 100vw;
@@ -232,6 +235,9 @@
   }
   .gap-1\.5 {
     gap: calc(var(--spacing) * 1.5);
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
   }
   .bg-\[\#151515\] {
     background-color: #151515;
@@ -289,6 +295,10 @@
   }
   .text-white {
     color: var(--color-white);
+  }
+  .grayscale-100 {
+    --tw-grayscale: grayscale(100%);
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .backdrop-blur-xs {
     --tw-backdrop-blur: blur(var(--blur-xs));
@@ -446,7 +456,6 @@ header.ativo .navMenuHamburguer .linha3 {
   color: var(--color-amber-300);
 }
 .tituloSecao {
-  text-align: center;
   font-family: var(--font-ibm);
   font-size: 20pt;
   --tw-font-weight: var(--font-weight-bold);
@@ -455,11 +464,42 @@ header.ativo .navMenuHamburguer .linha3 {
   text-transform: uppercase;
 }
 .textoSecao {
-  text-align: center;
   font-family: var(--font-inter);
   --tw-font-weight: var(--font-weight-light);
   font-weight: var(--font-weight-light);
   color: var(--color-white);
+}
+.imgParceiros {
+  width: 200px;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+.fade-edge::before, .fade-edge::after {
+  overflow: hidden;
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+.fade-edge::before {
+  left: 0;
+  background: linear-gradient(to right, #151515 75%, transparent 100%);
+}
+.fade-edge::after {
+  right: 0;
+  background: linear-gradient(to left, #151515 75%, transparent 100%);
 }
 @property --tw-translate-x {
   syntax: "*";
@@ -477,6 +517,59 @@ header.ativo .navMenuHamburguer .linha3 {
   initial-value: 0;
 }
 @property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-drop-shadow-size {
   syntax: "*";
   inherits: false;
 }
@@ -630,6 +723,19 @@ header.ativo .navMenuHamburguer .linha3 {
       --tw-translate-y: 0;
       --tw-translate-z: 0;
       --tw-font-weight: initial;
+      --tw-blur: initial;
+      --tw-brightness: initial;
+      --tw-contrast: initial;
+      --tw-grayscale: initial;
+      --tw-hue-rotate: initial;
+      --tw-invert: initial;
+      --tw-opacity: initial;
+      --tw-saturate: initial;
+      --tw-sepia: initial;
+      --tw-drop-shadow: initial;
+      --tw-drop-shadow-color: initial;
+      --tw-drop-shadow-alpha: 100%;
+      --tw-drop-shadow-size: initial;
       --tw-backdrop-blur: initial;
       --tw-backdrop-brightness: initial;
       --tw-backdrop-contrast: initial;

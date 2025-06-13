@@ -88,9 +88,44 @@ header.ativo .navMenuHamburguer .linha3 {
 }
 
 .tituloSecao {
-    @apply text-gray-400 font-bold text-[20pt] font-ibm uppercase text-center
+    @apply text-gray-400 font-bold text-[20pt] font-ibm uppercase
 }
 
 .textoSecao {
-    @apply text-white font-light font-inter text-center
+    @apply text-white font-light font-inter 
 }
+
+.imgParceiros {
+    @apply w-[200px]
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.fade-edge::before,
+  .fade-edge::after {
+    overflow: hidden;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .fade-edge::before {
+    left: 0;
+    background: linear-gradient(to right, #151515 75%, transparent 100%);
+  }
+
+  .fade-edge::after {
+    right: 0;
+    background: linear-gradient(to left, #151515 75%, transparent 100%);
+  }
