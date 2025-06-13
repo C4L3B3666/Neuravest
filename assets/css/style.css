@@ -139,6 +139,15 @@ header.ativo .navMenuHamburguer .linha3 {
     @apply font-inter uppercase font-bold text-[10pt] text-transparent bg-clip-text bg-[linear-gradient(90deg,_#fff_0%,_#fff_50%,_gray_100%)]
 }
 
+.textoGradiente {
+    @apply text-transparent bg-clip-text bg-[linear-gradient(90deg,_#fff_0%,_#fff_50%,_gray_100%)]
+}
+
+.textoGradiente1 {
+    @apply text-transparent bg-clip-text bg-[linear-gradient(90deg,_#fff_0%,_#fff_50%,_#FFD230_100%)];
+}
+
+
 .divDadosEstatisticos p {
     @apply font-inter text-white py-1.5 font-bold text-[15pt]
 }
