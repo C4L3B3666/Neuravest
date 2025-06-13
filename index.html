@@ -149,5 +149,31 @@
         
         
     </main>
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('.carousel-container .flex.overflow-x-auto');
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const nextButton = document.querySelector('.carousel-button.next');
+
+    // Captura a largura de um card (já renderizado)
+    const card = carousel.querySelector('.divDadosEstatisticos');
+    const cardWidth = card.offsetWidth + 16; // 16px se tiver gap-4 (1rem)
+
+    prevButton.addEventListener('click', () => {
+      carousel.scrollBy({
+        left: -cardWidth,
+        behavior: 'smooth'
+      });
+    });
+
+    nextButton.addEventListener('click', () => {
+      carousel.scrollBy({
+        left: cardWidth,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
