@@ -110,7 +110,7 @@ header.ativo .navMenuHamburguer .linha3 {
 
 
 .fade-edge::before,
-  .fade-edge::after {
+.fade-edge::after {
     overflow: hidden;
     content: '';
     position: absolute;
@@ -119,14 +119,51 @@ header.ativo .navMenuHamburguer .linha3 {
     height: 100%;
     z-index: 1;
     pointer-events: none;
-  }
+}
 
-  .fade-edge::before {
+.fade-edge::before {
     left: 0;
     background: linear-gradient(to right, #151515 89%, transparent 100%);
-  }
+}
 
-  .fade-edge::after {
+.fade-edge::after {
     right: 0;
     background: linear-gradient(to left, #151515 89%, transparent 100%);
-  }
+}
+
+.divDadosEstatisticos {
+    @apply mx-1.5 min-w-max h-max text-center p-4 m-2 cursor-pointer relative rounded-[10px] flex-initial  w-1/5 snap-start
+}
+
+.divDadosEstatisticos h4 {
+    @apply font-inter uppercase font-bold text-[10pt] text-transparent bg-clip-text bg-[linear-gradient(90deg,_#fff_0%,_#fff_50%,_gray_100%)]
+}
+
+.divDadosEstatisticos p {
+    @apply font-inter text-white py-1.5 font-bold text-[15pt]
+}
+
+.divDadosEstatisticos small {
+    @apply font-inter text-[gray] py-1.5 font-bold
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+.carousel-button {
+    @apply absolute z-[1] text-[#151515] border-none text-[20pt] shadow-[0_0_12px_#FFD230] cursor-pointer w-10 h-10 rounded-[50%] bg-amber-300
+}
+
+.carousel-button.prev {
+    @apply -left-9
+}
+
+.carousel-button.next {
+    @apply -right-3;
+}
