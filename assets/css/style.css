@@ -132,7 +132,7 @@ header.ativo .navMenuHamburguer .linha3 {
 }
 
 .divDadosEstatisticos {
-    @apply mx-1.5 min-w-max h-max text-center p-4 m-2 cursor-pointer relative rounded-[10px] flex-initial  w-1/5 snap-start
+    @apply mx-1.5 min-w-max h-max text-center p-4 m-2 cursor-pointer relative  rounded-[10px] flex-initial snap-start
 }
 
 .divDadosEstatisticos h4 {
@@ -142,11 +142,6 @@ header.ativo .navMenuHamburguer .linha3 {
 .textoGradiente {
     @apply text-transparent bg-clip-text bg-[linear-gradient(90deg,_#fff_0%,_#fff_50%,_gray_100%)]
 }
-
-.textoGradiente1 {
-    @apply text-transparent bg-clip-text bg-[linear-gradient(90deg,_#fff_0%,_#fff_50%,_#FFD230_100%)];
-}
-
 
 .divDadosEstatisticos p {
     @apply font-inter text-white py-1.5 font-bold text-[15pt]
