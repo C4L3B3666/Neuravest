@@ -68,11 +68,11 @@ header.ativo .navMenuHamburguer .linha3 {
 }
 
 .btn {
-    @apply bg-amber-300 px-2 py-1 text-[#151515] font-ibm font-medium shadow-[0_0_14px_#FFD230] rounded-2xl cursor-pointer border-2 border-amber-300;
+    @apply bg-amber-300 px-2 py-1 text-[#151515] font-ibm font-medium shadow-[0_0_14px_#FFD230] rounded-full cursor-pointer border-2 border-amber-300;
 }
 
 .btnPrimario {
-    @apply border-white bg-transparent shadow-none text-white hover:bg-amber-300 hover:text-[#151515] hover:border-amber-300 hover:shadow-[0_0_14px_#FFD230];
+    @apply border-[#2E2C2C] bg-transparent shadow-[0_0_14px_#2E2C2C] text-white hover:bg-amber-300 hover:text-[#151515] hover:border-amber-300 hover:shadow-[0_0_14px_#FFD230];
 }
 
 .textoColorido {
@@ -170,4 +170,42 @@ header.ativo .navMenuHamburguer .linha3 {
 
 .carousel-button.next {
     @apply -right-3;
+}
+
+
+
+.btnMostarPassoInvestimento {
+    @apply rounded-full p-1 font-inter text-white border-2 border-[#2E2C2C] text-[11pt] shadow-[0_0_12px_#2E2C2C] cursor-pointer bg-[#2E2C2C]
+}
+
+.btnMostarPassoInvestimento.ativo {
+    @apply bg-amber-300 text-[#151515] shadow-[0_0_12px_#FFD230] border-amber-300
+}
+
+.tituloPrincipalComoInvestir {
+    @apply font-ibm text-[13pt] text-white font-medium uppercase
+}
+
+.contentCardComoInvestir {
+    @apply flex items-center flex-col my-7
+}
+
+.textoPrincipalComoInvestir {
+    @apply text-white text-center py-1 font-inter font-light
+}
+
+.cardComoInvestir {
+    @apply p-2 border-2 border-[#2E2C2C] my-2 rounded-lg w-[85%] text-center cursor-pointer
+}
+
+.cardComoInvestir .iconeComoInvestir i {
+    @apply text-amber-300 text-[13pt]
+}
+
+.cardComoInvestir .textoPassoComoInvestir {
+    @apply font-inter font-bold text-amber-300 text-[12pt]
+}
+
+.cardComoInvestir .textoComoInvestir{
+    @apply font-inter font-light py-2 text-white
 }
