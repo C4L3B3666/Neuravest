@@ -209,3 +209,27 @@ header.ativo .navMenuHamburguer .linha3 {
 .cardComoInvestir .textoComoInvestir{
     @apply font-inter font-light py-2 text-white
 }
+
+hr {
+    @apply my-4 border-amber-300 w-1/2 m-auto rounded-full opacity-90
+}
+
+.hr1 {
+    @apply my-1 border-amber-300 w-1/2 m-auto rounded-full opacity-90
+}
+
+.acordeao {
+    @apply p-2 border-2 border-[#2E2C2C] rounded-lg w-11/12 mb-2.5 cursor-pointer
+}
+
+.acordeaoQuestao {
+    @apply flex justify-between items-center
+}
+
+.acordeaoQuestao h5 {
+    @apply font-ibm text-[17pt] uppercase font-bold text-gray-500
+}
+
+.acordeaoResposta {
+    @apply text-white font-inter font-extralight
+}
