@@ -219,11 +219,36 @@ hr {
 }
 
 .acordeao {
-    @apply p-2 border-2 border-[#2E2C2C] rounded-lg w-11/12 mb-2.5 cursor-pointer
+  @apply border-b border-[#2E2C2C] py-4 transition-all w-[90%];
 }
 
 .acordeaoQuestao {
-    @apply flex justify-between items-center
+  @apply flex justify-between items-center cursor-pointer py-2;
+}
+
+.acordeaoResposta {
+  @apply max-h-0 overflow-hidden opacity-0 transition-all duration-300;
+  ul {
+    @apply pl-6 pt-2 space-y-2;
+    li {
+      @apply relative pl-4;
+      &::before {
+        @apply content-[''] absolute left-0 top-2 w-2 h-2 bg-amber-300 rounded-full;
+      }
+    }
+  }
+}
+
+.acordeao.ativo .acordeaoResposta {
+  @apply max-h-[500px] opacity-100 py-4;
+}
+
+.acordeao.ativo h5 {
+    @apply text-amber-300 transition-all duration-500 ease-in-out;
+}
+
+.acordeao.ativo .checkAcordeao {
+    @apply text-amber-300 shadow-[0_0_14px_#FFD230]
 }
 
 .acordeaoQuestao h5 {
@@ -231,5 +256,9 @@ hr {
 }
 
 .acordeaoResposta {
-    @apply text-white font-inter font-extralight
+    @apply text-white font-inter font-extralight pt-2.5 opacity-0
+}
+
+.checkAcordeao {
+    @apply text-gray-500 font-ibm font-medium shadow-[0_0_14px_#6A7282] rounded-full text-[14pt] transition-all duration-500 ease-in-out
 }
