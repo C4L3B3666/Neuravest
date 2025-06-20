@@ -189,6 +189,9 @@
   .relative {
     position: relative;
   }
+  .sticky {
+    position: sticky;
+  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -200,6 +203,9 @@
   }
   .m-auto {
     margin: auto;
+  }
+  .mt-2\.5 {
+    margin-top: calc(var(--spacing) * 2.5);
   }
   .flex {
     display: flex;
@@ -362,8 +368,8 @@
   .text-\[\#151515\] {
     color: #151515;
   }
-  .text-gray-400 {
-    color: var(--color-gray-400);
+  .text-amber-300 {
+    color: var(--color-amber-300);
   }
   .text-white {
     color: var(--color-white);
@@ -854,6 +860,7 @@ hr {
   position: relative;
   margin: calc(var(--spacing) * 2);
   display: flex;
+  width: 85%;
   cursor: pointer;
   flex-direction: column;
   align-items: center;
@@ -869,6 +876,19 @@ hr {
 }
 .cardFundador .imagemFundador {
   width: 350px;
+  --tw-grayscale: grayscale(100%);
+  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 500ms;
+  transition-duration: 500ms;
+  --tw-ease: var(--ease-in);
+  transition-timing-function: var(--ease-in);
+}
+.cardFundador:hover .imagemFundador {
+  --tw-grayscale: grayscale(0%);
+  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
 }
 .cardFundador .nomeFundador {
   font-family: var(--font-inter);

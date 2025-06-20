@@ -271,11 +271,15 @@ hr {
 }
 
 .cardFundador {
-    @apply relative border-2 border-[#2E2C2C] m-2 rounded-lg p-2.5 flex flex-col items-center justify-center cursor-pointer text-center bg-[#151515] overflow-hidden
+    @apply relative border-2 border-[#2E2C2C] m-2 rounded-lg p-2.5 flex flex-col items-center justify-center cursor-pointer text-center bg-[#151515] overflow-hidden w-[85%] 
 }
 
 .cardFundador .imagemFundador {
-    @apply w-[350px]
+    @apply w-[350px] grayscale-100 transition-all ease-in duration-500
+}
+
+.cardFundador:hover .imagemFundador {
+    @apply grayscale-0
 }
 
 .cardFundador .nomeFundador {
