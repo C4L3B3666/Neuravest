@@ -86,3 +86,15 @@ document.querySelectorAll('.acordeaoQuestao').forEach(questao => {
     }
   });
 });
+
+
+const expandButton = document.getElementById('expandButton');
+const expandableSection = document.getElementById('expandableSection');
+
+expandButton.addEventListener('click', () => {
+    expandableSection.classList.toggle('expanded');
+    expandableSection.classList.toggle('fade-mask');
+    expandButton.textContent = expandableSection.classList.contains('expanded') 
+    ? 'Recolher Todas as Questões' 
+    : 'Explorar Todas as Questões';
+});

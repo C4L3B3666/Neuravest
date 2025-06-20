@@ -200,11 +200,11 @@
   .m-auto {
     margin: auto;
   }
-  .my-3 {
-    margin-block: calc(var(--spacing) * 3);
+  .my-2 {
+    margin-block: calc(var(--spacing) * 2);
   }
-  .my-3\.5 {
-    margin-block: calc(var(--spacing) * 3.5);
+  .my-2\.5 {
+    margin-block: calc(var(--spacing) * 2.5);
   }
   .flex {
     display: flex;
@@ -218,23 +218,14 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
-  .h-\[100px\] {
-    height: 100px;
-  }
-  .h-\[200px\] {
-    height: 200px;
-  }
-  .h-\[300px\] {
-    height: 300px;
-  }
-  .h-\[500px\] {
-    height: 500px;
-  }
   .h-max {
     height: max-content;
   }
   .h-screen {
     height: 100vh;
+  }
+  .max-h-\[650px\] {
+    max-height: 650px;
   }
   .w-36 {
     width: calc(var(--spacing) * 36);
@@ -384,6 +375,9 @@
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
+  .text-\[13pt\] {
+    font-size: 13pt;
+  }
   .text-\[14pt\] {
     font-size: 14pt;
   }
@@ -401,8 +395,14 @@
   .text-\[\#151515\] {
     color: #151515;
   }
+  .text-gray-400 {
+    color: var(--color-gray-400);
+  }
   .text-white {
     color: var(--color-white);
+  }
+  .uppercase {
+    text-transform: uppercase;
   }
   .underline {
     text-decoration-line: underline;
@@ -889,6 +889,13 @@ hr {
   transition-duration: 500ms;
   --tw-ease: var(--ease-in-out);
   transition-timing-function: var(--ease-in-out);
+}
+.fade-mask {
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);
+}
+.expanded {
+  max-height: none !important;
 }
 @property --tw-translate-x {
   syntax: "*";
