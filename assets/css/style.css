@@ -269,3 +269,23 @@ hr {
 .expanded {
     max-height: none !important;
 }
+
+.cardFundador {
+    @apply relative border-2 border-[#2E2C2C] m-2 rounded-lg p-2.5 flex flex-col items-center justify-center cursor-pointer text-center bg-[#151515]
+}
+
+.cardFundador .imagemFundador {
+    @apply w-[350px]
+}
+
+.cardFundador .nomeFundador {
+    @apply text-amber-300 font-inter text-[14pt] font-bold
+}
+
+.cardFundador .cargoFundador {
+    @apply font-ibm py-1.5 font-bold text-gray-400
+}
+
+.cardFundador .bioFundador {
+    @apply text-white font-inter font-light
+}
