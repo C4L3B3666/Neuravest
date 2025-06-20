@@ -295,6 +295,34 @@ hr {
 }
 
 .efeitoLuz {
-    @apply absolute h-52 w-52 rounded-[50%] animate-pulse -bottom-14 blur-xl opacity-70 -right-16;
+    @apply absolute h-52 w-52 rounded-[50%] -top-30 blur-xl opacity-70 -right-14;
     background: radial-gradient(circle, rgba(255, 210, 48, .8) 0%, rgba(255, 210, 48, 0) 70%);
+}
+
+.cardDepoimento {
+    @apply border-2 border-[#2E2C2C] p-2.5 rounded-lg flex flex-col w-[85%] relative overflow-hidden
+}
+
+.divImgSimboloDepoimento img {
+    @apply w-8
+}
+
+.divTextoDepoimento {
+    @apply py-1.5 font-inter text-white font-extralight text-[11pt]
+}
+
+.divImgClienteDepoimento img {
+    @apply w-9 h-9 rounded-full
+}
+
+.divContentImgNomeProfCliente {
+    @apply flex items-center justify-between
+}
+
+.divNomeClienteDepoimento {
+    @apply font-inter text-amber-300 font-extrabold text-[11pt]
+}
+
+.divProfissaoClienteDepoimento {
+    @apply font-inter text-gray-400 font-bold text-[10pt]
 }

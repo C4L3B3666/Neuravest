@@ -908,16 +908,62 @@ hr {
 }
 .efeitoLuz {
   position: absolute;
-  right: calc(var(--spacing) * -16);
-  bottom: calc(var(--spacing) * -14);
+  top: calc(var(--spacing) * -30);
+  right: calc(var(--spacing) * -14);
   height: calc(var(--spacing) * 52);
   width: calc(var(--spacing) * 52);
-  animation: var(--animate-pulse);
   border-radius: 50%;
   opacity: 70%;
   --tw-blur: blur(var(--blur-xl));
   filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   background: radial-gradient(circle, rgba(255, 210, 48, .8) 0%, rgba(255, 210, 48, 0) 70%);
+}
+.cardDepoimento {
+  position: relative;
+  display: flex;
+  width: 85%;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border-style: var(--tw-border-style);
+  border-width: 2px;
+  border-color: #2E2C2C;
+  padding: calc(var(--spacing) * 2.5);
+}
+.divImgSimboloDepoimento img {
+  width: calc(var(--spacing) * 8);
+}
+.divTextoDepoimento {
+  padding-block: calc(var(--spacing) * 1.5);
+  font-family: var(--font-inter);
+  font-size: 11pt;
+  --tw-font-weight: var(--font-weight-extralight);
+  font-weight: var(--font-weight-extralight);
+  color: var(--color-white);
+}
+.divImgClienteDepoimento img {
+  height: calc(var(--spacing) * 9);
+  width: calc(var(--spacing) * 9);
+  border-radius: calc(infinity * 1px);
+}
+.divContentImgNomeProfCliente {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.divNomeClienteDepoimento {
+  font-family: var(--font-inter);
+  font-size: 11pt;
+  --tw-font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-amber-300);
+}
+.divProfissaoClienteDepoimento {
+  font-family: var(--font-inter);
+  font-size: 10pt;
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-400);
 }
 @property --tw-translate-x {
   syntax: "*";
