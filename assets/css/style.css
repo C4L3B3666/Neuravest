@@ -271,7 +271,7 @@ hr {
 }
 
 .cardFundador {
-    @apply relative border-2 border-[#2E2C2C] m-2 rounded-lg p-2.5 flex flex-col items-center justify-center cursor-pointer text-center bg-[#151515] overflow-hidden w-[85%] 
+    @apply border-2 border-[#2E2C2C] m-2 rounded-lg p-2.5 flex flex-col items-center justify-center cursor-pointer text-center bg-[#151515] overflow-hidden w-[85%] sticky top-20
 }
 
 .cardFundador .imagemFundador {

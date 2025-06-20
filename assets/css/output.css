@@ -189,9 +189,6 @@
   .relative {
     position: relative;
   }
-  .sticky {
-    position: sticky;
-  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -203,9 +200,6 @@
   }
   .m-auto {
     margin: auto;
-  }
-  .mt-2\.5 {
-    margin-top: calc(var(--spacing) * 2.5);
   }
   .flex {
     display: flex;
@@ -857,7 +851,8 @@ hr {
   max-height: none !important;
 }
 .cardFundador {
-  position: relative;
+  position: sticky;
+  top: calc(var(--spacing) * 20);
   margin: calc(var(--spacing) * 2);
   display: flex;
   width: 85%;
