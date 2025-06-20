@@ -25,6 +25,7 @@
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     --blur-xs: 4px;
+    --blur-xl: 24px;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -857,6 +858,7 @@ hr {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   border-radius: var(--radius-lg);
   border-style: var(--tw-border-style);
   border-width: 2px;
@@ -883,10 +885,24 @@ hr {
   color: var(--color-gray-400);
 }
 .cardFundador .bioFundador {
+  padding-inline: calc(var(--spacing) * 6);
   font-family: var(--font-inter);
   --tw-font-weight: var(--font-weight-light);
   font-weight: var(--font-weight-light);
   color: var(--color-white);
+}
+.efeitoLuz {
+  position: absolute;
+  right: calc(var(--spacing) * -16);
+  bottom: calc(var(--spacing) * -14);
+  height: calc(var(--spacing) * 52);
+  width: calc(var(--spacing) * 52);
+  animation: var(--animate-pulse);
+  border-radius: 50%;
+  opacity: 70%;
+  --tw-blur: blur(var(--blur-xl));
+  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  background: radial-gradient(circle, rgba(255, 210, 48, .8) 0%, rgba(255, 210, 48, 0) 70%);
 }
 @property --tw-translate-x {
   syntax: "*";

@@ -246,7 +246,7 @@ hr {
 }
 
 .acordeao.ativo .checkAcordeao {
-    @apply text-amber-300 shadow-[0_0_14px_#FFD230]
+    @apply text-amber-300 shadow-[0_0_14px_#FFD230];
 }
 
 .acordeaoQuestao h5 {
@@ -271,7 +271,7 @@ hr {
 }
 
 .cardFundador {
-    @apply relative border-2 border-[#2E2C2C] m-2 rounded-lg p-2.5 flex flex-col items-center justify-center cursor-pointer text-center bg-[#151515]
+    @apply relative border-2 border-[#2E2C2C] m-2 rounded-lg p-2.5 flex flex-col items-center justify-center cursor-pointer text-center bg-[#151515] overflow-hidden
 }
 
 .cardFundador .imagemFundador {
@@ -287,5 +287,10 @@ hr {
 }
 
 .cardFundador .bioFundador {
-    @apply text-white font-inter font-light
+    @apply text-white font-inter font-light px-6
+}
+
+.efeitoLuz {
+    @apply absolute h-52 w-52 rounded-[50%] animate-pulse -bottom-14 blur-xl opacity-70 -right-16;
+    background: radial-gradient(circle, rgba(255, 210, 48, .8) 0%, rgba(255, 210, 48, 0) 70%);
 }
