@@ -331,3 +331,11 @@ hr {
 .divProfissaoClienteDepoimento {
     @apply font-inter text-gray-400 font-bold text-[10pt]
 }
+
+.linksRodape {
+    @apply text-gray-400 hover:underline
+}
+
+.linksRodapeSocial {
+    @apply text-[15pt] text-gray-400 hover:text-amber-300 transition-all duration-300 ease-linear
+}
