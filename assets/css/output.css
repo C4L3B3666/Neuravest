@@ -1004,6 +1004,18 @@ hr {
   filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   background: radial-gradient(circle, rgba(255, 210, 48, .8) 0%, rgba(255, 210, 48, 0) 70%);
 }
+.efeitoLuzFooter {
+  position: absolute;
+  top: calc(var(--spacing) * -30);
+  left: calc(var(--spacing) * -20);
+  height: calc(var(--spacing) * 52);
+  width: calc(var(--spacing) * 52);
+  border-radius: 50%;
+  opacity: 70%;
+  --tw-blur: blur(var(--blur-xl));
+  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  background: radial-gradient(circle, rgba(255, 210, 48, .8) 0%, rgba(255, 210, 48, 0) 70%);
+}
 .cardDepoimento {
   position: relative;
   display: flex;
