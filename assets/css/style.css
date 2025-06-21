@@ -68,7 +68,7 @@ header.ativo .navMenuHamburguer .linha3 {
 }
 
 .btn {
-    @apply bg-amber-300 px-2 py-1 text-[#151515] font-ibm font-medium shadow-[0_0_14px_#FFD230] rounded-full cursor-pointer border-2 border-amber-300;
+    @apply bg-amber-300 px-2 py-1 text-[#151515] font-ibm font-medium shadow-[0_0_14px_#FFD230] rounded-full cursor-pointer border-2 border-amber-300 text-[11pt];
 }
 
 .btnPrimario {
@@ -262,8 +262,8 @@ hr {
 }
 
 .fade-mask {
-    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);
 }
 
 .expanded {
@@ -296,6 +296,11 @@ hr {
 
 .efeitoLuz {
     @apply absolute h-52 w-52 rounded-[50%] -top-30 blur-xl opacity-70 -right-14;
+    background: radial-gradient(circle, rgba(255, 210, 48, .8) 0%, rgba(255, 210, 48, 0) 70%);
+}
+
+.efeitoLuzDepoimentos {
+    @apply absolute h-52 w-52 rounded-[50%] -bottom-14 blur-xl opacity-70 -right-32;
     background: radial-gradient(circle, rgba(255, 210, 48, .8) 0%, rgba(255, 210, 48, 0) 70%);
 }
 

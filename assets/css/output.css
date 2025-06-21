@@ -210,6 +210,9 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
+  .h-full {
+    height: 100%;
+  }
   .h-max {
     height: max-content;
   }
@@ -341,6 +344,9 @@
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-\[11pt\] {
+    font-size: 11pt;
   }
   .text-\[13pt\] {
     font-size: 13pt;
@@ -488,6 +494,7 @@ header.ativo .navMenuHamburguer .linha3 {
   padding-inline: calc(var(--spacing) * 2);
   padding-block: calc(var(--spacing) * 1);
   font-family: var(--font-ibm);
+  font-size: 11pt;
   --tw-font-weight: var(--font-weight-medium);
   font-weight: var(--font-weight-medium);
   color: #151515;
@@ -844,8 +851,8 @@ hr {
   transition-timing-function: var(--ease-in-out);
 }
 .fade-mask {
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);
 }
 .expanded {
   max-height: none !important;
@@ -910,6 +917,18 @@ hr {
   position: absolute;
   top: calc(var(--spacing) * -30);
   right: calc(var(--spacing) * -14);
+  height: calc(var(--spacing) * 52);
+  width: calc(var(--spacing) * 52);
+  border-radius: 50%;
+  opacity: 70%;
+  --tw-blur: blur(var(--blur-xl));
+  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  background: radial-gradient(circle, rgba(255, 210, 48, .8) 0%, rgba(255, 210, 48, 0) 70%);
+}
+.efeitoLuzDepoimentos {
+  position: absolute;
+  right: calc(var(--spacing) * -32);
+  bottom: calc(var(--spacing) * -14);
   height: calc(var(--spacing) * 52);
   width: calc(var(--spacing) * 52);
   border-radius: 50%;
