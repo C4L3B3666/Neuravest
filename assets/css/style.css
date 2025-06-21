@@ -339,3 +339,18 @@ hr {
 .linksRodapeSocial {
     @apply text-[15pt] text-gray-400 hover:text-amber-300 transition-all duration-300 ease-linear
 }
+
+.fa-arrow-up {
+    animation: elevacao 1s infinite;
+    
+}
+
+@keyframes elevacao {
+    to {
+        top: 10px;
+    }
+
+    from {
+        top: 0;
+    }
+}
