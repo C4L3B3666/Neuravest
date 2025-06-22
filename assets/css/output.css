@@ -233,6 +233,9 @@
   .h-\[95vh\] {
     height: 95vh;
   }
+  .h-\[100vh\] {
+    height: 100vh;
+  }
   .h-full {
     height: 100%;
   }
