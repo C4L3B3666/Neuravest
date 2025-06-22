@@ -366,7 +366,9 @@ hr {
 .form {
     @apply flex flex-col border-b-2 border-b-[#2E2C2C] p-2 h-[95vh] w-[91vw] relative overflow-hidden
 }
-
+.formAcessarConta {
+    @apply hidden
+}
 .navInputsContent {
     @apply flex flex-col text-white items-center relative my-2
 }

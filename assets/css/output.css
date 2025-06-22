@@ -1175,6 +1175,9 @@ hr {
   border-bottom-color: #2E2C2C;
   padding: calc(var(--spacing) * 2);
 }
+.formAcessarConta {
+  display: none;
+}
 .navInputsContent {
   position: relative;
   margin-block: calc(var(--spacing) * 2);
