@@ -1167,11 +1167,13 @@ hr {
   position: relative;
   display: flex;
   height: 95vh;
-  width: 91vw;
   flex-direction: column;
   overflow: hidden;
+  border-right-style: var(--tw-border-style);
+  border-right-width: 2px;
   border-bottom-style: var(--tw-border-style);
   border-bottom-width: 2px;
+  border-right-color: #2E2C2C;
   border-bottom-color: #2E2C2C;
   padding: calc(var(--spacing) * 2);
 }
@@ -1245,6 +1247,34 @@ hr {
   --tw-font-weight: var(--font-weight-semibold);
   font-weight: var(--font-weight-semibold);
   color: var(--color-gray-500);
+}
+.efeitoCirculoForm {
+  position: absolute;
+  z-index: 10;
+  margin: calc(var(--spacing) * 2.5);
+  height: calc(var(--spacing) * 5);
+  width: calc(var(--spacing) * 5);
+  cursor: pointer;
+  border-radius: calc(infinity * 1px);
+  background-color: var(--color-amber-300);
+  --tw-shadow: 0 0 12px var(--tw-shadow-color, #FFD230);
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  &:hover {
+    @media (hover: hover) {
+      --tw-scale-x: 110%;
+      --tw-scale-y: 110%;
+      --tw-scale-z: 110%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
+}
+.efeitoCirculoForm1 {
+  top: calc(var(--spacing) * 0);
+  right: calc(var(--spacing) * -1);
+}
+.efeitoCirculoForm2 {
+  bottom: calc(var(--spacing) * 0);
+  left: calc(var(--spacing) * -1);
 }
 .efeitoLuzForm {
   position: absolute;
