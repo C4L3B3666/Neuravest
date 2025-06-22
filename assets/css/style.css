@@ -311,7 +311,6 @@ hr {
     background: radial-gradient(circle, rgba(255, 210, 48, .8) 0%, rgba(255, 210, 48, 0) 70%);
 }
 
-
 .cardDepoimento {
     @apply border-2 border-[#2E2C2C] p-2.5 rounded-lg flex flex-col w-[85%] relative overflow-hidden
 }
@@ -376,7 +375,7 @@ hr {
 }
 
 .navInputsContent input {
-    @apply border-2 border-[#2E2C2C] outline-0 w-64 px-2 py-0.5 font-inter not-placeholder-shown:border-2 not-placeholder-shown:border-amber-300 hover:border-2 hover:border-amber-300 focus:border-2 focus:border-amber-300
+    @apply border-2 border-[#2E2C2C] outline-0 w-64 px-2 py-0.5 font-inter not-placeholder-shown:border-2 not-placeholder-shown:border-amber-300 hover:border-2 hover:border-amber-300 focus:border-2 focus:border-amber-300 transition-all duration-300 ease-linear
 }
 
 .navInputsContent input:focus + label ,
@@ -385,7 +384,7 @@ hr {
 }
 
 .navInputsContent label {
-    @apply absolute top-1 left-3 font-inter font-bold text-[11pt] text-gray-500 bg-[#151515] px-0.5
+    @apply absolute top-1 left-3 font-inter font-bold text-[11pt] text-gray-500 bg-[#151515] px-0.5 transition-all duration-300 ease-linear
 }
 
 .navInputsContent small {

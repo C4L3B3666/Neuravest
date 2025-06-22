@@ -1198,6 +1198,13 @@ hr {
   font-family: var(--font-inter);
   outline-style: var(--tw-outline-style);
   outline-width: 0px;
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  --tw-ease: linear;
+  transition-timing-function: linear;
   &:not(*:placeholder-shown) {
     border-style: var(--tw-border-style);
     border-width: 2px;
@@ -1240,6 +1247,13 @@ hr {
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
   color: var(--color-gray-500);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  --tw-ease: linear;
+  transition-timing-function: linear;
 }
 .navInputsContent small {
   font-family: var(--font-ibm);
