@@ -359,3 +359,11 @@ hr {
         top: 0;
     }
 }
+
+.navInputsContent {
+    @apply flex flex-col text-white items-center
+}
+
+.navInputsContent input {
+    @apply border-2 border-[#2E2C2C] outline-0 w-64 px-2 py-0.5 font-inter
+}
