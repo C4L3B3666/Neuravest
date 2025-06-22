@@ -49,7 +49,10 @@
         <form action="#" class="form ativo formCriarConta" id="formularioCriarConta">
             <div class="efeitoLuzForm "></div>
             <div class="flex items-center gap-3 flex-col p-2">
-                <div><img src="../assets/img/logo_texto.png" alt="" srcset="" class="w-36"></div>
+                <div>
+                    <a href="../index.html"><img src="../assets/img/logo_texto.png" alt="" srcset="" class="w-36">
+                    </a>
+                </div>
                 <div>
                     <h1 class="font-inter font-light text-[12pt] text-white text-center"><span class="textoBold">Bem-vindo!</span> Não perca a oportunidade de <span class="textoColoridoBold">transformar o seu futuro</span> com a <span class="textoBold">inteligência artificial</span>. Registre-se agora e <span class="textoColoridoBold">desbloqueie acesso</span> a um <span class="textoBold underline">software revolucionário.</span></h1>
                 </div>
@@ -77,8 +80,8 @@
                 </div>
             </div>
             <div class="flex items-center justify-center flex-col">
-                <div class="bg-[#212121] w-max p-1 rounded-full border border-[#2e2c2c]">
-                    <a href="#"><button class="btn btnPrimarioForm">Desistir</button></a>
+                <div class="navBotoesForms ">
+                    <a href="../index.html"><button class="btn btnPrimarioForm" type="reset">Desistir</button></a>
                     <a href="#"><button class="btn">Ativar Agora <i class="fa-solid fa-bolt text-[#151515]"></i></button></a>
                 </div>
                 <button type="button" id="botaoMostrarFormEntrar" class="botaoTrocarForms">Já tenho uma <span class="textoColoridoBold">NeuraConta.</span></button>
@@ -93,7 +96,9 @@
         <form action="#" class="form formAcessarConta" id="formularioAcessarConta">
             <div class="efeitoLuzForm "></div>
             <div class="flex items-center gap-3 flex-col p-2">
-                <div><img src="../assets/img/logo_texto.png" alt="" srcset="" class="w-36"></div>
+                <div>
+                    <a href="../index.html"><img src="../assets/img/logo_texto.png" alt="" srcset="" class="w-36"></a>
+                </div>
                 <div>
                     <h1 class="font-inter font-light text-[12pt] text-white text-center"><span class="textoBold">Bom vê-lo novamente!</span> Agora você tem o <span class="textoColoridoBold">poder de mudar</span> o teu <span class="textoColoridoBold">futuro financeiro</span>. <span class="textoBold underline">Teu dinheiro merece trabalhar por você</span>.</h1>
                 </div>
@@ -111,8 +116,8 @@
                 </div>
             </div>
             <div class="flex items-center justify-center flex-col">
-                <div class="bg-[#212121] w-max p-1 rounded-full border border-[#2e2c2c]">
-                    <a href="#"><button class="btn btnPrimarioForm">Desistir</button></a>
+                <div class="navBotoesForms">
+                    <a href="../index.html"><button class="btn btnPrimarioForm" type="reset">Desistir</button></a>
                     <a href="#"><button class="btn">Ficar Rico Agora <i class="fa-solid fa-money-bill-wave text-[#151515]"></i></button></a>
                 </div>
                 <button type="button" id="botaoMostrarFormCriar" class="botaoTrocarForms">Ainda não tenho uma <span class="textoColoridoBold">NeuraConta.</span></button>
@@ -122,21 +127,5 @@
             </div>
         </form>
     </main>
-    <!-- <script>
-        const formCriar = document.querySelector(".formCriarConta")
-        const formAcessar = document.querySelector(".formAcessarConta")
-        const mostrarFormEntrar = document.querySelector("#botaoMostrarFormEntrar")
-        const mostrarFormCriar = document.querySelector("#botaoMostrarFormCriar")
-
-        mostrarFormEntrar.addEventListener("click", ()=> {
-            formCriar.classList.remove("ativo")
-            formAcessar.classList.add("ativo")
-        })
-
-        mostrarFormCriar.addEventListener("click", ()=> {
-            formCriar.classList.add("ativo")
-            formAcessar.classList.remove("ativo")
-        })
-    </script> -->
 </body>
 </html>
