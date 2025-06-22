@@ -361,9 +361,13 @@ hr {
 }
 
 .navInputsContent {
-    @apply flex flex-col text-white items-center
+    @apply flex flex-col text-white items-center relative border-2 border-r-amber-500
 }
 
 .navInputsContent input {
     @apply border-2 border-[#2E2C2C] outline-0 w-64 px-2 py-0.5 font-inter
+}
+
+.navInputsContent label {
+    @apply absolute top-1 left-10
 }
