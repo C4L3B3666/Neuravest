@@ -71,8 +71,11 @@ header.ativo .navMenuHamburguer .linha3 {
     @apply bg-amber-300 px-2 py-1 text-[#151515] font-ibm font-medium shadow-[0_0_14px_#FFD230] rounded-full cursor-pointer border-2 border-amber-300 text-[11pt];
 }
 
-.btnPrimario {
+.btnPrimario, .btnPrimarioForm {
     @apply border-[#2E2C2C] bg-transparent shadow-[0_0_14px_#2E2C2C] text-white hover:bg-amber-300 hover:text-[#151515] hover:border-amber-300 hover:shadow-[0_0_14px_#FFD230];
+}
+.btnPrimarioForm {
+    @apply border-0 bg-transparent shadow-none hover:bg-transparent hover:shadow-none hover:text-red-500
 }
 
 .textoColorido {
@@ -107,7 +110,6 @@ header.ativo .navMenuHamburguer .linha3 {
 .animate-scroll {
   animation: scroll 30s linear infinite;
 }
-
 
 .fade-edge::before,
 .fade-edge::after {
@@ -309,6 +311,11 @@ hr {
     background: radial-gradient(circle, rgba(255, 210, 48, .8) 0%, rgba(255, 210, 48, 0) 70%);
 }
 
+.efeitoLuzForm {
+    @apply absolute h-52 w-56 rounded-[50%] -bottom-30 blur-xl opacity-70 -right-14;
+    background: radial-gradient(circle, rgba(255, 210, 48, .8) 0%, rgba(255, 210, 48, 0) 70%);
+}
+
 .cardDepoimento {
     @apply border-2 border-[#2E2C2C] p-2.5 rounded-lg flex flex-col w-[85%] relative overflow-hidden
 }
@@ -361,13 +368,22 @@ hr {
 }
 
 .navInputsContent {
-    @apply flex flex-col text-white items-center relative border-2 border-r-amber-500
+    @apply flex flex-col text-white items-center relative my-2
 }
 
 .navInputsContent input {
-    @apply border-2 border-[#2E2C2C] outline-0 w-64 px-2 py-0.5 font-inter
+    @apply border-2 border-[#2E2C2C] outline-0 w-64 px-2 py-0.5 font-inter not-placeholder-shown:border-2 not-placeholder-shown:border-amber-300 hover:border-2 hover:border-amber-300 focus:border-2 focus:border-amber-300
+}
+
+.navInputsContent input:focus + label ,
+.navInputsContent input:not(:placeholder-shown) + label {
+    @apply text-amber-300 -top-2 text-[9pt]
 }
 
 .navInputsContent label {
-    @apply absolute top-1 left-10
+    @apply absolute top-1 left-3 font-inter font-bold text-[11pt] text-gray-500 bg-[#151515] px-0.5
+}
+
+.navInputsContent small {
+    @apply text-gray-500 font-ibm text-[8pt] font-semibold
 }
