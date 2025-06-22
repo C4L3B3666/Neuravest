@@ -1160,7 +1160,7 @@ hr {
 .form {
   position: relative;
   display: none;
-  height: 95vh;
+  height: 85vh;
   flex-direction: column;
   overflow: hidden;
   border-right-style: var(--tw-border-style);
@@ -1299,7 +1299,7 @@ hr {
   right: calc(var(--spacing) * -1);
 }
 .efeitoCirculoForm2 {
-  bottom: calc(var(--spacing) * 0);
+  bottom: calc(var(--spacing) * 9);
   left: calc(var(--spacing) * -1);
 }
 .efeitoLuzForm {
