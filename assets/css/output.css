@@ -1163,12 +1163,9 @@ hr {
   height: 85vh;
   flex-direction: column;
   overflow: hidden;
-  border-right-style: var(--tw-border-style);
-  border-right-width: 2px;
-  border-bottom-style: var(--tw-border-style);
-  border-bottom-width: 2px;
-  border-right-color: #2E2C2C;
-  border-bottom-color: #2E2C2C;
+  border-style: var(--tw-border-style);
+  border-width: 2px;
+  border-color: #2E2C2C;
   padding: calc(var(--spacing) * 2);
 }
 .formCriarConta.ativo {
@@ -1299,7 +1296,7 @@ hr {
   right: calc(var(--spacing) * -1);
 }
 .efeitoCirculoForm2 {
-  bottom: calc(var(--spacing) * 9);
+  bottom: calc(var(--spacing) * 0);
   left: calc(var(--spacing) * -1);
 }
 .efeitoLuzForm {

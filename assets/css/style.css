@@ -363,7 +363,7 @@ hr {
 }
 
 .form {
-    @apply hidden flex-col border-b-2 border-r-2 border-b-[#2E2C2C] border-r-[#2E2C2C] p-2 h-[85vh] relative overflow-hidden
+    @apply hidden flex-col border-2 border-[#2E2C2C] p-2 h-[85vh] relative overflow-hidden
 }
 
 .formCriarConta.ativo {
@@ -408,7 +408,7 @@ hr {
 }
 
 .efeitoCirculoForm2 {
-    @apply bottom-9 -left-1
+    @apply bottom-0 -left-1
 }
 
 .efeitoLuzForm {
