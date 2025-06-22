@@ -311,10 +311,6 @@ hr {
     background: radial-gradient(circle, rgba(255, 210, 48, .8) 0%, rgba(255, 210, 48, 0) 70%);
 }
 
-.efeitoLuzForm {
-    @apply absolute h-52 w-56 rounded-[50%] -bottom-30 blur-xl opacity-70 -right-14;
-    background: radial-gradient(circle, rgba(255, 210, 48, .8) 0%, rgba(255, 210, 48, 0) 70%);
-}
 
 .cardDepoimento {
     @apply border-2 border-[#2E2C2C] p-2.5 rounded-lg flex flex-col w-[85%] relative overflow-hidden
@@ -386,4 +382,9 @@ hr {
 
 .navInputsContent small {
     @apply text-gray-500 font-ibm text-[8pt] font-semibold
+}
+
+.efeitoLuzForm {
+    @apply absolute h-52 w-full rounded-[50%] -bottom-30 blur-xl opacity-60 -right-14;
+    background: radial-gradient(circle, rgba(255, 210, 48, .8) 0%, rgba(255, 210, 48, 0) 70%);
 }
