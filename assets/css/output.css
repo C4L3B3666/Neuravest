@@ -315,10 +315,6 @@
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
@@ -326,17 +322,11 @@
   .border-\[\#2E2C2C\] {
     border-color: #2E2C2C;
   }
-  .border-\[\#2e2c2c\] {
-    border-color: #2e2c2c;
-  }
   .border-amber-300 {
     border-color: var(--color-amber-300);
   }
   .bg-\[\#151515\] {
     background-color: #151515;
-  }
-  .bg-\[\#212121\] {
-    background-color: #212121;
   }
   .bg-\[\#15151585\] {
     background-color: #15151585;
@@ -1310,6 +1300,16 @@ hr {
   --tw-blur: blur(var(--blur-xl));
   filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   background: radial-gradient(circle, rgba(255, 210, 48, .8) 0%, rgba(255, 210, 48, 0) 70%);
+}
+.navBotoesForms {
+  z-index: 20;
+  width: max-content;
+  border-radius: calc(infinity * 1px);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: #2e2c2c;
+  background-color: #212121;
+  padding: calc(var(--spacing) * 1);
 }
 @property --tw-translate-x {
   syntax: "*";
