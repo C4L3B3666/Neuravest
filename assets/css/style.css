@@ -363,11 +363,15 @@ hr {
 }
 
 .form {
-    @apply flex flex-col border-b-2 border-r-2 border-b-[#2E2C2C] border-r-[#2E2C2C] p-2 h-[95vh] relative overflow-hidden
+    @apply hidden flex-col border-b-2 border-r-2 border-b-[#2E2C2C] border-r-[#2E2C2C] p-2 h-[95vh] relative overflow-hidden
 }
 
-.formAcessarConta {
-    @apply hidden
+.formCriarConta.ativo {
+    @apply flex
+}
+
+.formAcessarConta.ativo {
+    @apply flex
 }
 
 .navInputsContent {
@@ -389,6 +393,10 @@ hr {
 
 .navInputsContent small {
     @apply text-gray-500 font-ibm text-[8pt] font-semibold
+}
+
+.botaoTrocarForms {
+    @apply text-white font-ibm pt-2 text-[11pt] cursor-pointer hover:underline active:underline
 }
 
 .efeitoCirculoForm {
