@@ -530,11 +530,6 @@
       justify-content: space-between;
     }
   }
-  .sm\:bg-red-600 {
-    @media (width >= 40rem) {
-      background-color: var(--color-red-600);
-    }
-  }
   .sm\:px-16 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 16);
@@ -543,11 +538,6 @@
   .md\:w-4\/6 {
     @media (width >= 48rem) {
       width: calc(4/6 * 100%);
-    }
-  }
-  .md\:bg-green-400 {
-    @media (width >= 48rem) {
-      background-color: var(--color-green-400);
     }
   }
   .lg\:sticky {
@@ -630,11 +620,6 @@
   .lg\:gap-3 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 3);
-    }
-  }
-  .lg\:bg-\[\#151515\] {
-    @media (width >= 64rem) {
-      background-color: #151515;
     }
   }
   .lg\:bg-transparent {
