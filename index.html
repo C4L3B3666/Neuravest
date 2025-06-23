@@ -44,36 +44,35 @@
             <a href="./"><img src="assets/img/logo_texto.png" alt="imagem da logo da neuravest" srcset="" class="w-32" draggable="false"></a>
         </nav>
 
-        <nav class="absolute flex items-center flex-col bg-[#151515] text-white top-0 w-screen right-0 h-screen justify-around text-center font-inter translate-x-full transition-all duration-300 ease-in pt-7">
+        <nav class="absolute flex items-center flex-col bg-[#151515] text-white top-0 w-screen right-0 h-screen justify-around text-center font-inter translate-x-full transition-all duration-300 ease-in pt-7 lg:translate-0 lg:sticky lg:flex-row lg:h-auto lg:w-max lg:pt-0 lg:justify-center lg:gap-3 lg:bg-transparent">
             <a href="#" class="linkMenu">Página Inicial</a>
             <a href="#" class="linkMenu">Como Funciona?</a>
             <a href="#" class="linkMenu">Planos e Retornos</a>
             <a href="#" class="linkMenu">Nossos Parceiros</a>
             <a href="#" class="linkMenu">Quem Somos?</a>
-            <a href="#" class="linkMenu"><button class="btn btnPrimario">Fale Connosco</button></a>
-            <a href="#" class="linkMenu"><button class="btn">Investir - fácil e rápido <i class="fa-solid fa-piggy-bank text-[14pt] text-[#151515]"></i></button></a>
+            <a href="#" class="linkMenu lg:hidden"><button class="btn">Investir - fácil e rápido <i class="fa-solid fa-piggy-bank text-[14pt] text-[#151515]"></i></button></a>
         </nav>
 
-        <nav class="relative left-3">
+        <nav class="relative left-3 sm:left-32 lg:hidden">
             <a href="#"><button class="btn">Ative sua Riqueza <i class="fa-solid fa-bolt"></i></button></a>
         </nav>
 
-        <nav class="hidden">
+        <nav class="hidden lg:flex lg:gap-1.5">
             <a href="#"><button class="btn btnPrimario">Fale Connosco</button></a>
             <a href="#"><button class="btn">Investir - fácil e rápido <i class="fa-solid fa-piggy-bank"></i></button></a>
         </nav>
 
-        <nav class="navMenuHamburguer">
+        <nav class="navMenuHamburguer lg:hidden">
             <div class="linha"></div>
             <div class="linha linha2"></div>
             <div class="linha linha3"></div>
         </nav>
     </header>
 
-    <main class="px-4 bg-[#151515]">
+    <main class="px-4 bg-[#151515] sm:px-16">
 
-        <section class="h-max flex items-center flex-col pt-24 text-center text-white">
-            <div>
+        <section class="h-max flex items-center flex-col pt-24 text-center text-white lg:flex-row lg:text-left lg:justify-between">
+            <div class="lg:w-1/2">
                 <h1 class="font-ibm text-3xl font-extrabold"><span class="textoColorido">Neuravest.</span>: Sua <span class="textoColorido">riqueza</span> sob o poder da <span class="textoColorido animate-pulse">inteligência artificial.</span></h1>
                 <p class="font-inter font-light py-4">Com lucros de até <span class="textoBold">2,14% ao mês!</span> A <span class="textoColoridoBold text-shadow-2xs text-shadow-amber-300">Neuravest.</span> combina algoritmos avançados e tecnologia de ponta para identificar as melhores oportunidades e proteger o seu dinheiro. Descubra como a nossa <span class="textoBold">IA pode multiplicar o seu dinheiro de forma inteligente e segura!</span></p>
                 <div class="py-3.5">
@@ -82,7 +81,7 @@
                 </div>
             </div>
             <div>
-                <img src="assets/img/bg_herox.png" alt="imagem principal da hero - uma mulher humanoide" srcset="" draggable="false">
+                <img src="assets/img/bg_hero.gif" alt="imagem principal da hero - uma mulher humanoide" srcset="" draggable="false">
             </div>
         </section>
 
@@ -91,7 +90,7 @@
                 <h1 class="tituloSecao">os números que <span class="textoColorido animate-pulse">falam</span> por si.</h1>
                 <p class="textoSecao">Cada número aqui conta uma história de segurança, estratégia e crescimento. Bem-vindo ao futuro dos investimentos</p>
             </div>
-            <div class="carousel-container relative flex m-auto items-center w-[205px] justify-center">
+            <div class="carousel-container relative flex m-auto items-center w-[205px] justify-center lg:w-full">
                 <button class="carousel-button prev" aria-label="Anterior">&#10094;</button>
                 <div class="flex items-center overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar" style="-webkit-overflow-scrolling: touch;">
 
@@ -149,8 +148,8 @@
             </div>
         </section>
 
-        <section>
-            <p class="font-inter text-[26pt] px-4 text-center font-extrabold text-white"><span class="textoGradiente">Juntos,</span> Redefinimos o Futuro <span class="textoGradiente">Financeiro.</span></p>
+        <section class="py-2.5 lg:flex lg:items-center lg:justify-center">
+            <p class="textosGrandeDestaque"><span class="textoGradiente">Juntos,</span> Redefinimos o Futuro <span class="textoGradiente">Financeiro.</span></p>
         </section>
               
         <section class="py-7">
@@ -162,7 +161,7 @@
             <hr>
 
             <div class="flex flex-col items-center justify-center">
-                <div class="border-2 border-[#2E2C2C] rounded-full flex justify-around p-1 shadow-[0_0_12px_#2E2C2C] bg-[#151515] w-full">
+                <div class="border-2 border-[#2E2C2C] rounded-full flex justify-around p-1 shadow-[0_0_12px_#2E2C2C] bg-[#151515] w-full sm:w-3/4 md:w-4/6 lg:w-1/3">
                     <button class="btnMostarPassoInvestimento ativo">Identificação</button>
                     <button class="btnMostarPassoInvestimento">Pagamento</button>
                     <button class="btnMostarPassoInvestimento">Hora da riqueza</button>
@@ -246,16 +245,16 @@
             </div>
         </section>
 
-        <section class="flex flex-col items-center justify-center">
-            <nav>
-                <p class="font-inter text-[26pt] px-4 text-center font-extrabold text-white">Onde a <span class="textoGradiente">inteligência</span> se transforma em rentabilidade.</p>
+        <section class="flex flex-col items-center justify-center lg:flex-row">
+            <nav class="lg:flex lg:items-center lg:justify-center">
+                <p class="textosGrandeDestaquex">Onde a <span class="textoGradiente">inteligência</span> se transforma em rentabilidade.</p>
             </nav>
             <nav class="pb-2.5">
-                <img src="assets/img/img_section.gif" alt="imagem da edição do telefone" srcset="" draggable="false">
+                <img src="assets/img/img_section.gif" alt="imagem da edição do telefone" srcset="" draggable="false" class="sm:w-[400px] lg:w-[900px]">
             </nav>
         </section>
 
-        <section class="max-h-[650px] overflow-hidden fade-mask" id="expandableSection">
+        <section class="max-h-[650px] sm:max-h-[590px] overflow-hidden fade-mask" id="expandableSection">
             <div>
                 <h1 class="tituloSecao"><span class="textoColorido">transparência</span> inteligente: tire as suas <span class="textoColorido animate-pulse">dúvidas</span> com <span class="textoColorido animate-pulse">clareza</span></h1>
                 <p class="textoSecao">Na <span class="textoColoridoBold">Neuravest.</span> <span class="textoBold">priorizamos</span> a <span class="textoBold">clareza</span>, <span class="textoBold">transparência</span> e <span class="textoBold">segurança</span> - e isso se constrói com informação clara e acessível. Por isso, reunimos abaixo as <span class="textoColoridoBold">perguntas mais frequentes</span> sobre o nosso modelo de IA e aspectos do da <span class="textoColoridoBold">Neuravest.</span> Se ainda tiver dúvidas, saber outros aspectos da <span class="textoColoridoBold">Neura.</span> ou a sua dúvida não esteja na área abaixo, <span class="textoBold">nossa equipe está pronta para responder todas as questões</span> e fornecer o suporte necessário - <span class="textoColoridoBold">porque você merece saber onde está investindo</span></p>
@@ -399,7 +398,7 @@
 
             <hr>
 
-            <h3 class="uppercase font-ibm text-amber-300 font-extrabold text-[13pt] text-center">Fundadores...</h3>
+            <h3 class="uppercase font-ibm text-gray-400 font-extrabold text-[13pt] text-center">Conheça a <span class="textoColorido">NeuraEquipe.</span></h3>
             
             <div class="flex flex-col items-center justify-center">
 
@@ -461,8 +460,8 @@
             </div>
         </section>
 
-        <section class="py-2.5">
-            <p class="font-inter text-[26pt] px-4 text-center font-extrabold text-white">Seu <span class="textoGradiente">dinheiro</span> merece <span class="textoGradiente">trabalhar mais que você.</span></p>
+        <section class="py-2.5 lg:flex lg:items-center lg:justify-center">
+            <p class="textosGrandeDestaque">Seu <span class="textoGradiente">dinheiro</span> merece <span class="textoGradiente">trabalhar mais que você.</span></p>
         </section>
 
         <section class="relative h-full">
@@ -495,11 +494,11 @@
             </div>
         </section>
 
-        <section class="py-2.5">
-            <p class="font-inter text-[26pt] px-4 text-center font-extrabold text-white"><span class="textoColoridoBold">Neuravest.</span> <span class="textoGradiente">—</span> onde a <span class="textoGradiente">inteligência</span> investe e o <span class="textoGradiente">futuro</span> rende<span class="textoGradiente">.</span></p>
+        <section class="py-2.5 lg:flex lg:items-center lg:justify-center">
+            <p class="textosGrandeDestaque"><span class="textoColoridoBold">Neuravest.</span> <span class="textoGradiente">—</span> onde a <span class="textoGradiente">inteligência</span> investe e o <span class="textoGradiente">futuro</span> rende<span class="textoGradiente">.</span></p>
         </section>
 
-        <footer class="bg-[#151515] flex flex-col items-center border-2 border-amber-300 p-4  hover:-rotate-6 transition-transform duration-300 ease-in" style="border-radius: 30% 90% 70% 30% / 33% 18% 82% 67%;">
+        <footer class="bg-[#151515] flex flex-col items-center border-2 border-amber-300 p-4  hover:-rotate-6 transition-transform duration-300 ease-in lg:hover:rotate-6" style="border-radius: 30% 90% 70% 30% / 33% 18% 82% 67%;">
             <div>
                 <a href="./" target="_top"><img src="assets/img/logo.png" alt="imagem da logo da neuravest" srcset="" class="w-16"></a>
             </div>
@@ -528,7 +527,7 @@
             </div>
         </footer>
 
-        <div class="flex flex-col items-center justify-center py-4 relative">
+        <div class="flex flex-col items-center justify-center py-4 relative sm:flex-row sm:justify-between z-20">
             <div class="text-gray-400 font-inter text-[11pt] flex gap-2.5">
                 <a href="#" class="hover:underline">Termos e Condições</a>
                 <a href="#" class="hover:underline">Política de Privacidade</a>
