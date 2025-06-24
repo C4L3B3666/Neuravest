@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const botoes = document.querySelectorAll('.btnMostarPassoInvestimento');
     const secoes = {
         "Identificação": document.getElementById('secaoIdentificacao'),
-        "Pagamento": document.getElementById('secaoPagamento'),
+        "Alimente sua IA": document.getElementById('secaoPagamento'),
         "Hora da riqueza": document.getElementById('horaRiqueza')
     };
 
