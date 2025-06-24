@@ -372,7 +372,7 @@ hr {
 }
 
 .form {
-    @apply hidden flex-col border-2 border-[#2E2C2C] p-2 h-[85vh] relative overflow-hidden justify-center items-center
+    @apply hidden flex-col border-2 border-[#2E2C2C] p-2 h-[85vh] relative overflow-hidden justify-center items-center lg:border-none 
 }
 
 .navContentTituloForm {
@@ -392,11 +392,11 @@ hr {
 }
 
 .contentorNavInputs {
-    @apply sm:flex sm:gap-3
+    @apply sm:flex sm:gap-3 lg:flex-wrap lg:flex lg:items-center justify-center
 }
 
 .navInputsContent {
-    @apply flex flex-col text-white items-center relative my-2 sm:items-start
+    @apply flex flex-col text-white items-center relative my-2 sm:items-start lg:flex-wrap
 }
 
 .navInputsContent input {

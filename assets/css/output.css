@@ -9,9 +9,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
-    --color-red-600: oklch(57.7% 0.245 27.325);
     --color-amber-300: oklch(87.9% 0.169 91.605);
-    --color-green-400: oklch(79.2% 0.209 151.711);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-white: #fff;
@@ -226,6 +224,9 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
+  .h-\[85vh\] {
+    height: 85vh;
+  }
   .h-full {
     height: 100%;
   }
@@ -258,6 +259,9 @@
   }
   .w-screen {
     width: 100vw;
+  }
+  .max-w-\[590px\] {
+    max-width: 590px;
   }
   .translate-x-full {
     --tw-translate-x: 100%;
@@ -470,12 +474,6 @@
   .text-shadow-2xs {
     text-shadow: 0px 1px 0px var(--tw-text-shadow-color, rgb(0 0 0 / 0.15));
   }
-  .text-shadow-amber-300 {
-    --tw-text-shadow-color: oklch(87.9% 0.169 91.605);
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-text-shadow-color: color-mix(in oklab, var(--color-amber-300) var(--tw-text-shadow-alpha), transparent);
-    }
-  }
   .hover\:scale-105 {
     &:hover {
       @media (hover: hover) {
@@ -497,6 +495,14 @@
     &:hover {
       @media (hover: hover) {
         text-decoration-line: underline;
+      }
+    }
+  }
+  .hover\:grayscale-0 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-grayscale: grayscale(0%);
+        filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
       }
     }
   }
@@ -560,6 +566,11 @@
       height: auto;
     }
   }
+  .lg\:h-screen {
+    @media (width >= 64rem) {
+      height: 100vh;
+    }
+  }
   .lg\:w-1\/2 {
     @media (width >= 64rem) {
       width: calc(1/2 * 100%);
@@ -568,6 +579,11 @@
   .lg\:w-1\/3 {
     @media (width >= 64rem) {
       width: calc(1/3 * 100%);
+    }
+  }
+  .lg\:w-\[80vw\] {
+    @media (width >= 64rem) {
+      width: 80vw;
     }
   }
   .lg\:w-\[900px\] {
@@ -622,9 +638,40 @@
       gap: calc(var(--spacing) * 3);
     }
   }
+  .lg\:rounded-lg {
+    @media (width >= 64rem) {
+      border-radius: var(--radius-lg);
+    }
+  }
+  .lg\:rounded-tl-lg {
+    @media (width >= 64rem) {
+      border-top-left-radius: var(--radius-lg);
+    }
+  }
+  .lg\:rounded-bl-lg {
+    @media (width >= 64rem) {
+      border-bottom-left-radius: var(--radius-lg);
+    }
+  }
+  .lg\:border-2 {
+    @media (width >= 64rem) {
+      border-style: var(--tw-border-style);
+      border-width: 2px;
+    }
+  }
+  .lg\:border-\[\#2E2C2C\] {
+    @media (width >= 64rem) {
+      border-color: #2E2C2C;
+    }
+  }
   .lg\:bg-transparent {
     @media (width >= 64rem) {
       background-color: transparent;
+    }
+  }
+  .lg\:p-0 {
+    @media (width >= 64rem) {
+      padding: calc(var(--spacing) * 0);
     }
   }
   .lg\:pt-0 {
@@ -1400,6 +1447,10 @@ hr {
   border-width: 2px;
   border-color: #2E2C2C;
   padding: calc(var(--spacing) * 2);
+  @media (width >= 64rem) {
+    --tw-border-style: none;
+    border-style: none;
+  }
 }
 .navContentTituloForm {
   justify-content: center;
@@ -1428,11 +1479,21 @@ hr {
   display: flex;
 }
 .contentorNavInputs {
+  justify-content: center;
   @media (width >= 40rem) {
     display: flex;
   }
   @media (width >= 40rem) {
     gap: calc(var(--spacing) * 3);
+  }
+  @media (width >= 64rem) {
+    display: flex;
+  }
+  @media (width >= 64rem) {
+    flex-wrap: wrap;
+  }
+  @media (width >= 64rem) {
+    align-items: center;
   }
 }
 .navInputsContent {
@@ -1444,6 +1505,9 @@ hr {
   color: var(--color-white);
   @media (width >= 40rem) {
     align-items: flex-start;
+  }
+  @media (width >= 64rem) {
+    flex-wrap: wrap;
   }
 }
 .navInputsContent input {
