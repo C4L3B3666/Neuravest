@@ -916,7 +916,11 @@ header.ativo .navMenuHamburguer .linha3 {
   color: var(--color-gray-400);
   text-transform: uppercase;
 }
-.textoSecao {
+.navContentorTextosLaterais {
+  display: flex;
+  flex-direction: column;
+}
+.textoSecao, .textoLateralSecao {
   font-family: var(--font-inter);
   --tw-font-weight: var(--font-weight-light);
   font-weight: var(--font-weight-light);
