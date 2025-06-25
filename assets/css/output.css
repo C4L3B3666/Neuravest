@@ -9,6 +9,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-amber-200: oklch(92.4% 0.12 95.746);
     --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
@@ -203,11 +204,20 @@
   .left-3 {
     left: calc(var(--spacing) * 3);
   }
+  .z-10 {
+    z-index: 10;
+  }
   .z-20 {
     z-index: 20;
   }
   .z-\[3\] {
     z-index: 3;
+  }
+  .z-\[10\] {
+    z-index: 10;
+  }
+  .z-\[15\] {
+    z-index: 15;
   }
   .z-\[100\] {
     z-index: 100;
@@ -548,6 +558,15 @@
   .sm\:px-16 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 16);
+    }
+  }
+  .hover\:sm\:-rotate-6 {
+    &:hover {
+      @media (hover: hover) {
+        @media (width >= 40rem) {
+          rotate: calc(6deg * -1);
+        }
+      }
     }
   }
   .md\:w-4\/6 {
@@ -1397,12 +1416,29 @@ hr {
 .cardDepoimento {
   width: 85%;
   flex-shrink: 0;
+  --tw-scale-x: 95%;
+  --tw-scale-y: 95%;
+  --tw-scale-z: 95%;
+  scale: var(--tw-scale-x) var(--tw-scale-y);
+  cursor: pointer;
   scroll-snap-align: start;
   border-radius: var(--radius-lg);
   border-style: var(--tw-border-style);
   border-width: 2px;
-  border-color: #2E2C2C;
+  border-color: var(--color-amber-300);
   padding: calc(var(--spacing) * 2.5);
+  transition-property: transform, translate, scale, rotate;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 200ms;
+  transition-duration: 200ms;
+  --tw-ease: var(--ease-in);
+  transition-timing-function: var(--ease-in);
+  &:hover {
+    @media (hover: hover) {
+      border-color: var(--color-amber-200);
+    }
+  }
   @media (width >= 40rem) {
     width: calc(2/3 * 100%);
   }

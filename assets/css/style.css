@@ -333,11 +333,11 @@ hr {
 }
 
 .contetorCardDepoimentos {
-    @apply flex gap-4 overflow-x-auto px-4 py-2 scroll-smooth snap-x snap-mandatory ;
+    @apply flex gap-4 overflow-x-auto px-4 py-2 scroll-smooth snap-x snap-mandatory;
 }
 
 .cardDepoimento {
-    @apply border-2 border-[#2E2C2C] p-2.5 rounded-lg flex-shrink-0 w-[85%] sm:w-2/3 md:w-1/2 lg:w-1/4 snap-start;
+    @apply border-2 border-amber-300 p-2.5 rounded-lg flex-shrink-0 w-[85%] sm:w-2/3 md:w-1/2 lg:w-1/4 snap-start transition-transform duration-200 ease-in scale-95 cursor-pointer hover:border-amber-200;
 }
 
 .contetorCardDepoimentos::-webkit-scrollbar {
