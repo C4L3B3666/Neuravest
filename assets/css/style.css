@@ -102,13 +102,22 @@ header.ativo .navMenuHamburguer .linha3 {
     @apply text-gray-400 font-bold text-[20pt] font-ibm uppercase
 }
 
+.divSecaoLateral {
+    @apply lg:ml-4 hidden sm:block pt-2 lg:pt-0
+}
+
 .navContentorTextosLaterais {
-    @apply flex flex-col
+    @apply flex flex-col justify-between lg:flex-row
 }
 
 .textoSecao, .textoLateralSecao {
-    @apply text-white font-light font-inter 
+    @apply text-white font-inter font-light
 }
+
+.textoLateralSecao {
+    @apply font-bold
+}
+
 
 .imgParceiros {
     @apply w-[200px]

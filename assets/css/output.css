@@ -916,15 +916,36 @@ header.ativo .navMenuHamburguer .linha3 {
   color: var(--color-gray-400);
   text-transform: uppercase;
 }
+.divSecaoLateral {
+  display: none;
+  padding-top: calc(var(--spacing) * 2);
+  @media (width >= 40rem) {
+    display: block;
+  }
+  @media (width >= 64rem) {
+    margin-left: calc(var(--spacing) * 4);
+  }
+  @media (width >= 64rem) {
+    padding-top: calc(var(--spacing) * 0);
+  }
+}
 .navContentorTextosLaterais {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  @media (width >= 64rem) {
+    flex-direction: row;
+  }
 }
 .textoSecao, .textoLateralSecao {
   font-family: var(--font-inter);
   --tw-font-weight: var(--font-weight-light);
   font-weight: var(--font-weight-light);
   color: var(--color-white);
+}
+.textoLateralSecao {
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
 }
 .imgParceiros {
   width: 200px;
