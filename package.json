@@ -1,7 +1,28 @@
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.1.9",
+    "express": "^5.1.0",
+    "path": "^0.12.7",
     "tailwind-scrollbar": "^4.0.2",
     "tailwindcss": "^4.1.9"
-  }
+  },
+  "name": "neuravest",
+  "version": "1.0.0",
+  "description": "Neuravest é uma plataforma de investimentos inteligente que usa algoritmos de IA avançada para otimizar sua carteira de investimentos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C4L3B3666/Neuravest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/C4L3B3666/Neuravest/issues"
+  },
+  "homepage": "https://github.com/C4L3B3666/Neuravest#readme"
 }
