@@ -79,7 +79,7 @@ header.ativo .navMenuHamburguer .linha3 {
 }
 
 .textosGrandeDestaque, .textosGrandeDestaquex {
-    @apply font-inter text-[26pt] px-4 text-center font-extrabold text-white sm:text-[29pt] lg:text-[35pt] lg:w-[40%]
+    @apply font-inter text-[25pt] px-4 text-center font-extrabold text-white sm:text-[29pt] lg:text-[35pt] lg:w-[40%]
 }
 
 .textosGrandeDestaquex {
@@ -155,7 +155,7 @@ header.ativo .navMenuHamburguer .linha3 {
 }
 
 .divDadosEstatisticos {
-    @apply mx-1.5 min-w-max h-max text-center p-4 m-2 cursor-pointer relative  rounded-[10px] flex-initial snap-start
+    @apply mx-1.5 min-w-max h-max text-center p-4 m-2 cursor-pointer relative rounded-[10px] flex-initial snap-start 
 }
 
 .divDadosEstatisticos h4 {
