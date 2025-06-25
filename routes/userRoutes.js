@@ -25,4 +25,30 @@ router.post('/registrar', async (req, res) => {
   }
 });
 
+// Rota de login
+router.post('/login', async (req, res) => {
+  const { telefone, senha } = req.body;
+
+  try {
+    const usuario = await User.findOne({ telefone });
+
+    if (!usuario) {
+      return res.status(400).send('Usuário não encontrado.');
+    }
+
+    const senhaCorreta = await bcrypt.compare(senha, usuario.senha);
+
+    if (!senhaCorreta) {
+      return res.status(400).send('Palavra-passe incorreta.');
+    }
+
+    req.session.usuarioId = usuario._id;
+
+    res.redirect('/painel'); 
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Erro ao fazer login.');
+  }
+});
+
 module.exports = router;
