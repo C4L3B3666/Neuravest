@@ -46,7 +46,7 @@
             <img src="../assets/img/x.png" alt="" srcset="" class="hover:grayscale-0 duration-300 ease-in h-[85vh] max-w-[590px]  grayscale-100 lg:rounded-tl-lg lg:rounded-bl-lg">
         </div>
         
-        <form action="#" class="form ativo formCriarConta" id="formularioCriarConta">
+        <form action="/registrar" method="post" class="form ativo formCriarConta" id="formularioCriarConta">
             <div class="efeitoLuzForm "></div>
             <div class="flex items-center gap-3 flex-col p-2">
                 <div>
@@ -59,24 +59,24 @@
                 <div>
                     <div class="contentorNavInputs">
                         <nav class="navInputsContent">
-                            <input type="text" name="" id="nomeCompleto" placeholder="">
+                            <input type="text" name="nomeCompleto" id="nomeCompleto" placeholder="">
                             <label for="nomeCompleto">Nome Completo</label>
                             <small>Usado para a sua identificação formal</small>
                         </nav>
                         <nav class="navInputsContent">
-                            <input type="text" name="" id="apelido" placeholder="">
+                            <input type="text" name="nomeFicticio" id="apelido" placeholder="">
                             <label for="apelido">Nome fictício</label>
                             <small>Para a sua identificação pública ou publicidades</small>
                         </nav>
                     </div>
                     <div class="contentorNavInputs">
                         <nav class="navInputsContent">
-                            <input type="tel" name="" id="telefone" placeholder="">
+                            <input type="tel" name="telefone" id="telefone" placeholder="">
                             <label for="telefone">Telemóvel</label>
                             <small>Usado para contato direito ou anúncios</small>
                         </nav>
                         <nav class="navInputsContent">
-                            <input type="password" name="" id="senha" placeholder="">
+                            <input type="password" name="senha" id="senha" placeholder="">
                             <label for="senha">Palavra-Passe</label>
                             <small>Usado para garantir acesso a sua NeuraConta.</small>
                         </nav>

@@ -16,6 +16,9 @@ app.use(express.json());
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
+const userRoutes = require('./routes/userRoutes');
+app.use(userRoutes);
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'form.html'));
 });
