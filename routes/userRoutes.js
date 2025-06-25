@@ -71,30 +71,37 @@ router.get('/painel', async (req, res) => {
 
     let listaInvestimentos = '';
 
-    usuario.investimentos.forEach((inv, i) => {
-      listaInvestimentos += `
-        <li>
-          #${i + 1} | Valor: ${inv.valor} KZ | Status: ${inv.status} | Enviado em: ${new Date(inv.data).toLocaleString()}
-        </li>
-      `;
-    });
+    if (usuario.investimentos.length > 0) {
+      usuario.investimentos.forEach((inv, index) => {
+        listaInvestimentos += `
+          <li>
+            #${index + 1} | Valor: <strong>${inv.valor} KZ</strong> |
+            Status: <strong>${inv.status}</strong> |
+            Data: ${new Date(inv.data).toLocaleString()}
+          </li>
+        `;
+      });
+    } else {
+      listaInvestimentos = '<li>Nenhum investimento encontrado ainda.</li>';
+    }
 
     res.send(`
-      <h1>Bem-vindo, ${usuario.nomeFicticio}</h1>
-      <p>Saldo atual: ${usuario.saldo.toFixed(2)} KZs</p>
+      <h1>Olá, ${usuario.nomeFicticio || usuario.nomeCompleto}!</h1>
+      <p>Seu saldo atual é: <strong>${usuario.saldo.toFixed(2)} KZs</strong></p>
 
       <h3>Seus Investimentos</h3>
-      <ul>${listaInvestimentos || '<li>Nenhum investimento encontrado.</li>'}</ul>
+      <ul>${listaInvestimentos}</ul>
 
       <br/>
       <a href="/investir">Fazer novo investimento</a><br/>
-      <a href="/logout">Sair</a>
+      <a href="/logout">Terminar Sessão</a>
     `);
   } catch (err) {
     console.error(err);
     res.status(500).send('Erro ao carregar painel');
   }
 });
+
 
 
 router.get('/logout', (req, res) => {
