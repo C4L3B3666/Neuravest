@@ -51,4 +51,31 @@ router.post('/login', async (req, res) => {
   }
 });
 
+router.get('/painel', async (req, res) => {
+  if (!req.session.userId) {
+    return res.redirect('/');
+  }
+
+  try {
+    const usuario = await User.findById(req.session.userId);
+
+    if (!usuario) return res.redirect('/');
+
+    res.send(`
+      <h1>Bem-vindo, ${usuario.nomeFicticio}</h1>
+      <p>Saldo atual: ${usuario.saldo.toFixed(2)} KZs</p>
+      <a href="/logout">Terminar sessão</a>
+    `);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Erro ao carregar painel');
+  }
+});
+
+router.get('/logout', (req, res) => {
+  req.session.destroy(() => {
+    res.redirect('/');
+  });
+});
+
 module.exports = router;
