@@ -1386,27 +1386,47 @@ hr {
 }
 .contetorCardDepoimentos {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: calc(var(--spacing) * 2);
+  scroll-snap-type: x var(--tw-scroll-snap-strictness);
+  --tw-scroll-snap-strictness: mandatory;
+  gap: calc(var(--spacing) * 4);
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-inline: calc(var(--spacing) * 4);
+  padding-block: calc(var(--spacing) * 2);
 }
 .cardDepoimento {
-  position: relative;
-  display: flex;
   width: 85%;
-  flex-direction: column;
-  overflow: hidden;
+  flex-shrink: 0;
+  scroll-snap-align: start;
   border-radius: var(--radius-lg);
   border-style: var(--tw-border-style);
   border-width: 2px;
   border-color: #2E2C2C;
   padding: calc(var(--spacing) * 2.5);
   @media (width >= 40rem) {
-    width: calc(2/5 * 100%);
+    width: calc(2/3 * 100%);
+  }
+  @media (width >= 48rem) {
+    width: calc(1/2 * 100%);
   }
   @media (width >= 64rem) {
     width: calc(1/4 * 100%);
   }
+}
+.contetorCardDepoimentos::-webkit-scrollbar {
+  width: .5rem;
+  height: 0.5rem;
+  background-color: transparent;
+}
+.contetorCardDepoimentos::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+.contetorCardDepoimentos::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #fbbf24;
+  box-shadow: 0 0 14px #FFD230;
 }
 .divImgSimboloDepoimento img {
   width: calc(var(--spacing) * 8);
