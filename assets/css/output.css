@@ -1271,6 +1271,9 @@ hr {
     width: calc(3/6 * 100%);
   }
   @media (width >= 64rem) {
+    top: calc(var(--spacing) * 16);
+  }
+  @media (width >= 64rem) {
     width: calc(1/4 * 100%);
   }
 }
