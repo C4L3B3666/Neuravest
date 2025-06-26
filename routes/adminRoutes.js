@@ -167,5 +167,40 @@ router.post('/admin/rejeitar-saque', async (req, res) => {
   }
 });
 
+router.get('/admin/editar-taxa', async (req, res) => {
+  if (!req.session.adminId) return res.redirect('/admin');
+
+  const admin = await Admin.findById(req.session.adminId);
+  res.send(`
+    <h2>Editar Taxa de Crescimento</h2>
+    <form action="/admin/editar-taxa" method="POST">
+      <label for="taxa">Nova taxa de crescimento diária (%):</label>
+      <input type="number" step="0.0001" name="taxa" value="${(admin.taxaCrescimento * 100).toFixed(4)}" required />
+      <button type="submit">Salvar</button>
+    </form>
+    <br/>
+    <a href="/admin/painel">Voltar ao Painel</a>
+  `);
+});
+
+router.post('/admin/editar-taxa', async (req, res) => {
+  if (!req.session.adminId) return res.redirect('/admin');
+
+  const novaTaxa = parseFloat(req.body.taxa) / 100;
+
+  try {
+    const admin = await Admin.findById(req.session.adminId);
+    admin.taxaCrescimento = novaTaxa;
+    await admin.save();
+
+    res.send(`
+      <p>Taxa atualizada com sucesso para ${(novaTaxa * 100).toFixed(4)}%</p>
+      <a href="/admin/painel">Voltar ao Painel</a>
+    `);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Erro ao atualizar taxa.');
+  }
+});
 
 module.exports = router;

@@ -45,6 +45,8 @@ app.post('/logout', (req, res) => {
   });
 });
 
+require('./jobs/growthJob'); 
+
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);
 });

@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const User = require('./models/User');
 
-// Conectando ao MongoDB
 mongoose.connect('mongodb://127.0.0.1:27017/neuravestDB', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -28,7 +27,7 @@ async function aplicarCrescimento() {
       }
     }
 
-    console.log("🏁 Crescimento diário aplicado com sucesso.");
+    console.log("Crescimento diário aplicado com sucesso.");
   } catch (err) {
     console.error("Erro ao aplicar crescimento:", err);
   } finally {
