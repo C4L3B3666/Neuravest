@@ -107,20 +107,43 @@ router.get('/painel', async (req, res) => {
   }
 });
 
-
-
 router.get('/logout', (req, res) => {
   req.session.destroy(() => {
     res.redirect('/');
   });
 });
 
-router.get('/investir', (req, res) => {
-  if (!req.session.usuarioId) {
-    return res.redirect('/');
-  }
 
-  router.post('/investir', upload.single('comprovativo'), async (req, res) => {
+router.get('/investir', async (req, res) => {
+  if (!req.session.usuarioId) return res.redirect('/');
+
+  try {
+    const usuario = await User.findById(req.session.usuarioId);
+
+    res.send(`
+      <h2>Fazer novo investimento</h2>
+      <form action="/investir" method="POST" enctype="multipart/form-data">
+        <label for="valor">Valor a investir (KZ):</label>
+        <input type="number" name="valor" required />
+
+        <br/><br/>
+        <label for="comprovativo">Comprovativo (imagem ou PDF):</label>
+        <input type="file" name="comprovativo" accept="image/*,.pdf" required />
+
+        <br/><br/>
+        <button type="submit">Enviar investimento</button>
+      </form>
+
+      <br/>
+      <a href="/painel">Voltar ao painel</a>
+    `);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Erro ao carregar a página de investimento.");
+  }
+});
+
+router.post('/investir', upload.single('comprovativo'), async (req, res) => {
   if (!req.session.usuarioId) {
     return res.redirect('/');
   }
@@ -153,27 +176,6 @@ router.get('/investir', (req, res) => {
     res.status(500).send("Erro ao processar investimento.");
   }
 });
-
-
-  res.send(`
-    <h2>Fazer novo investimento</h2>
-    <form action="/investir" method="POST" enctype="multipart/form-data">
-      <label for="valor">Valor a investir (KZ):</label>
-      <input type="number" name="valor" required />
-
-      <br/><br/>
-      <label for="comprovativo">Comprovativo (imagem ou PDF):</label>
-      <input type="file" name="comprovativo" accept="image/*,.pdf" required />
-
-      <br/><br/>
-      <button type="submit">Enviar investimento</button>
-    </form>
-
-    <br/>
-    <a href="/painel">Voltar ao painel</a>
-  `);
-});
-
 
 
 module.exports = router;
