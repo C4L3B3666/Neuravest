@@ -6,6 +6,7 @@ const userSchema = new mongoose.Schema({
   telefone: { type: String, required: true, unique: true },
   senha: { type: String, required: true },
   saldo: { type: Number, default: 0 },
+  ultimoCrescimento: { type: Date, default: Date.now },
   investimentos: [
     {
       valor: Number,
@@ -16,5 +17,6 @@ const userSchema = new mongoose.Schema({
   ],
   dataCriacao: { type: Date, default: Date.now }
 });
+
 
 module.exports = mongoose.model('User', userSchema);

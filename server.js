@@ -31,6 +31,9 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'form.html'));
 });
 
+const adminRoutes = require('./routes/adminRoutes');
+app.use(adminRoutes);
+
 const PORT = 4000;
 
 app.post('/logout', (req, res) => {

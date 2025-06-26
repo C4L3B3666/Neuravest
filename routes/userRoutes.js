@@ -73,6 +73,20 @@ router.get('/painel', async (req, res) => {
 
   try {
     const usuario = await User.findById(req.session.usuarioId);
+    
+    const hoje = new Date();
+    const ultima = new Date(usuario.ultimoCrescimento);
+    const diffDias = Math.floor((hoje - ultima) / (1000 * 60 * 60 * 24));
+
+    if (diffDias >= 1) {
+      const taxa = 0.00077;
+      const novoSaldo = usuario.saldo * Math.pow((1 + taxa), diffDias);
+
+      usuario.saldo = parseFloat(novoSaldo.toFixed(2));
+      usuario.ultimoCrescimento = hoje;
+
+      await usuario.save();
+    }
 
     let listaInvestimentos = '';
 
