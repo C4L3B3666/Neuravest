@@ -31,24 +31,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'form.html'));
 });
 
-const PORT = 3000;
-
-app.get('/painel', async (req, res) => {
-  if (!req.session.usuarioId) {
-    return res.redirect('/');
-  }
-
-  const User = require('./models/User');
-  const usuario = await User.findById(req.session.usuarioId);
-
-  res.send(`
-    <h1>Olá, ${usuario.nomeFicticio}!</h1>
-    <p>Seu saldo atual é: <strong>${usuario.saldo.toFixed(2)} KZs</strong></p>
-    <form method="POST" action="/logout">
-      <button type="submit">Terminar Sessão</button>
-    </form>
-  `);
-});
+const PORT = 4000;
 
 app.post('/logout', (req, res) => {
   req.session.destroy(err => {

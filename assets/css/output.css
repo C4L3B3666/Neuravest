@@ -204,9 +204,6 @@
   .left-3 {
     left: calc(var(--spacing) * 3);
   }
-  .z-10 {
-    z-index: 10;
-  }
   .z-20 {
     z-index: 20;
   }
@@ -215,9 +212,6 @@
   }
   .z-\[10\] {
     z-index: 10;
-  }
-  .z-\[15\] {
-    z-index: 15;
   }
   .z-\[100\] {
     z-index: 100;
@@ -500,13 +494,6 @@
         --tw-scale-y: 105%;
         --tw-scale-z: 105%;
         scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
-  .hover\:-rotate-6 {
-    &:hover {
-      @media (hover: hover) {
-        rotate: calc(6deg * -1);
       }
     }
   }

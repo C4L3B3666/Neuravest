@@ -40,34 +40,39 @@ router.post('/registrar', async (req, res) => {
 // Rota de login
 router.post('/login', async (req, res) => {
   const { telefone, senha } = req.body;
-
+  
   try {
-    const usuario = await User.findOne({ telefone });
+    if (!telefone || !senha) {
+      return res.status(400).send('Telefone e senha são obrigatórios.');
+    }
 
+    const usuario = await User.findOne({ telefone });
+    
     if (!usuario) {
       return res.status(400).send('Usuário não encontrado.');
     }
 
     const senhaCorreta = await bcrypt.compare(senha, usuario.senha);
-
+    
     if (!senhaCorreta) {
       return res.status(400).send('Palavra-passe incorreta.');
     }
 
     req.session.usuarioId = usuario._id;
-
-    res.redirect('/painel'); 
+    console.log("Login bem-sucedido para:", usuario.telefone);
+    
+    return res.redirect('/painel');
   } catch (err) {
-    console.error(err);
-    res.status(500).send('Erro ao fazer login.');
+    console.error('Erro no login:', err);
+    return res.status(500).send('Erro interno ao processar login.');
   }
 });
 
 router.get('/painel', async (req, res) => {
-  if (!req.session.userId) return res.redirect('/');
+  if (!req.session.usuarioId) return res.redirect('/');
 
   try {
-    const usuario = await User.findById(req.session.userId);
+    const usuario = await User.findById(req.session.usuarioId);
 
     let listaInvestimentos = '';
 
@@ -111,12 +116,12 @@ router.get('/logout', (req, res) => {
 });
 
 router.get('/investir', (req, res) => {
-  if (!req.session.userId) {
+  if (!req.session.usuarioId) {
     return res.redirect('/');
   }
 
   router.post('/investir', upload.single('comprovativo'), async (req, res) => {
-  if (!req.session.userId) {
+  if (!req.session.usuarioId) {
     return res.redirect('/');
   }
 
@@ -128,7 +133,7 @@ router.get('/investir', (req, res) => {
   }
 
   try {
-    const usuario = await User.findById(req.session.userId);
+    const usuario = await User.findById(req.session.usuarioId);
 
     usuario.investimentos.push({
       valor: parseFloat(valor),
