@@ -15,6 +15,16 @@ const userSchema = new mongoose.Schema({
       status: { type: String, enum: ['pendente', 'confirmado', 'rejeitado'], default: 'pendente' }
     }
   ],
+
+  saques: [
+  {
+    valor: Number,
+    data: { type: Date, default: Date.now },
+    motivo: String,
+    status: { type: String, enum: ['pendente', 'aprovado', 'rejeitado'], default: 'pendente' }
+  }
+],
+
   dataCriacao: { type: Date, default: Date.now }
 });
 

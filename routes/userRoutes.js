@@ -104,17 +104,53 @@ router.get('/painel', async (req, res) => {
       listaInvestimentos = '<li>Nenhum investimento encontrado ainda.</li>';
     }
 
+    const totalInvestido = usuario.investimentos
+    .filter(inv => inv.status === 'confirmado')
+    .reduce((acc, inv) => acc + inv.valor, 0);
+
+    const lucro = usuario.saldo - totalInvestido;
+
     res.send(`
-      <h1>Olá, ${usuario.nomeFicticio || usuario.nomeCompleto}!</h1>
-      <p>Seu saldo atual é: <strong>${usuario.saldo.toFixed(2)} KZs</strong></p>
+      <div style="font-family: Arial; max-width: 600px; margin: auto; padding: 20px;">
+      <h1>Bem-vindo, ${usuario.nomeFicticio || usuario.nomeCompleto}</h1>
+    
+      <hr/>
+      <h2 style="color: green;">Saldo atual: ${usuario.saldo.toFixed(2)} KZs</h2>
+      <p><strong>Lucro gerado:</strong> ${lucro.toFixed(2)} KZs</p>
+      <p><strong>Total investido:</strong> ${totalInvestido.toFixed(2)} KZs</p>
 
-      <h3>Seus Investimentos</h3>
-      <ul>${listaInvestimentos}</ul>
+      <hr/>
+      <h3>Investimentos</h3>
+      <ul>
+        ${usuario.investimentos.map((inv, i) => `
+          <li>
+            #${i + 1} | ${inv.valor} KZ | ${inv.status.toUpperCase()} | ${new Date(inv.data).toLocaleDateString()}
+          </li>
+        `).join('')}
+      </ul>
 
-      <br/>
-      <a href="/investir">Fazer novo investimento</a><br/>
-      <a href="/logout">Terminar Sessão</a>
-    `);
+      <h3>Saques Solicitados</h3>
+      <ul>
+          ${usuario.saques.map((saque, i) => `
+          <li>
+            #${i + 1} | ${saque.valor} KZ | ${saque.status.toUpperCase()} | ${new Date(saque.data).toLocaleDateString()}
+              ${saque.motivo ? `<br/><em>Motivo:</em> ${saque.motivo}` : ""}
+          </li>
+      `).join('')}
+      </ul>
+
+
+      <hr/>
+      <div style="margin-top: 20px;">
+        <a href="/investir"><button style="padding: 10px;">Novo Investimento</button></a>
+        <a href="/sacar"><button style="padding: 10px;">Solicitar Saque</button></a>
+        <form action="/logout" method="POST" style="display:inline;">
+        <button type="submit" style="padding: 10px;"> Terminar Sessão</button>
+      < /form>
+      </div>
+      </div>
+`);
+
   } catch (err) {
     console.error(err);
     res.status(500).send('Erro ao carregar painel');
@@ -188,6 +224,56 @@ router.post('/investir', upload.single('comprovativo'), async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).send("Erro ao processar investimento.");
+  }
+});
+
+router.get('/sacar', (req, res) => {
+  if (!req.session.usuarioId) return res.redirect('/');
+
+  res.send(`
+    <h2>Solicitar Saque</h2>
+    <form action="/sacar" method="POST">
+      <label>Valor a sacar (KZ):</label><br/>
+      <input type="number" name="valor" required/><br/><br/>
+
+      <label>Motivo (opcional):</label><br/>
+      <textarea name="motivo" rows="3"></textarea><br/><br/>
+
+      <button type="submit">Enviar Solicitação</button>
+    </form>
+    <br/>
+    <a href="/painel">Voltar ao painel</a>
+  `);
+});
+
+router.post('/sacar', async (req, res) => {
+  if (!req.session.usuarioId) return res.redirect('/');
+
+  const { valor, motivo } = req.body;
+
+  try {
+    const usuario = await User.findById(req.session.usuarioId);
+
+    // Verifica se o valor solicitado é menor ou igual ao saldo
+    if (valor > usuario.saldo) {
+      return res.send("Saldo insuficiente para saque.");
+    }
+
+    usuario.saques.push({
+      valor: parseFloat(valor),
+      motivo,
+      status: 'pendente'
+    });
+
+    await usuario.save();
+
+    res.send(`
+      <p>Pedido de saque enviado com sucesso e está pendente de aprovação.</p>
+      <a href="/painel">Voltar ao painel</a>
+    `);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Erro ao solicitar saque.");
   }
 });
 
